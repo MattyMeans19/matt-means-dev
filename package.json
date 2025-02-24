@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mattymeans19.github.io/freelancing/",
+  "homepage": "https://github.com/MattyMeans19/matt-means-dev",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
