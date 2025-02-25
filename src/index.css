@@ -19,3 +19,7 @@
 body{
   background-image: linear-gradient(to top, rgb(11, 94, 11), rgb(115, 124, 117));
 }
+
+.templates-bg{
+  background-color: whitesmoke;
+}

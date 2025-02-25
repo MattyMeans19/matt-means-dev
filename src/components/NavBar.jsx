@@ -12,7 +12,7 @@ function NavBar(){
             <div class="flex flex-nowrap w-[75vw] gap-4">
                 <NavButton
                     text="🏠 Home"
-                    route = "home"
+                    route = "/"
                  />
                  <NavButton
                     text="📃 Templates"

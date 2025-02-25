@@ -1,9 +1,9 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 import Intro from "./Intro";
 import Details from "./Details";
 import Conclusion from "./Conclusion";
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 function Home(){
     return(

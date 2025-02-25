@@ -1,5 +1,5 @@
 import React from "react";
-import ME from "../assets/ME.jpg"
+import ME from "../../assets/ME.jpg"
 
 function NameTag(){
     return(
