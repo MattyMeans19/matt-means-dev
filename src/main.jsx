@@ -11,8 +11,8 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter basename='/matt-means-dev'>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/templates" element={<Prebuilds />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="templates" element={<Prebuilds />} />
+        <Route path="portfolio" element={<Portfolio />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
