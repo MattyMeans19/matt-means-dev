@@ -24,10 +24,11 @@ function TemplateSelector(){
                 viewChange={changeView}
             />
             <StyleSelector 
-                fontColor={fontColor}
+                fontColor={setcolor}
             />
             <PreviewBox 
                 view={view}
+                fontColor={fontColor}
             />
         </div>
     </div>

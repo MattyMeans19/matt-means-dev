@@ -8,11 +8,21 @@ function ColorSelector(props){
             <button class="border-double border-3 col-span-1 row-span-3 bg-red-500" onClick={() =>{
                 props.color("text-red-500")
             }}></button>
-            <button class="border-double border-3 col-span-1 row-span-3 bg-emerald-500"></button>
-            <button class="border-double border-3 col-span-1 row-span-3 bg-blue-500"></button>
-            <button class="border-double border-3 col-span-1 row-span-3 bg-purple-500"></button>
-            <button class="border-double border-3 col-span-1 row-span-3 bg-orange-500"></button>
-            <button class="border-double border-3 col-span-1 row-span-3 bg-black"></button>
+            <button class="border-double border-3 col-span-1 row-span-3 bg-emerald-500"  onClick={() =>{
+                props.color("text-emerald-500")
+            }}></button>
+            <button class="border-double border-3 col-span-1 row-span-3 bg-blue-500"  onClick={() =>{
+                props.color("text-blue-500")
+            }}></button>
+            <button class="border-double border-3 col-span-1 row-span-3 bg-purple-500"  onClick={() =>{
+                props.color("text-purple-500")
+            }}></button>
+            <button class="border-double border-3 col-span-1 row-span-3 bg-orange-500"  onClick={() =>{
+                props.color("text-orange-500")
+            }}></button>
+            <button class="border-double border-3 col-span-1 row-span-3 bg-black"  onClick={() =>{
+                props.color("text-black")
+            }}></button>
         </div>
     )
 }
