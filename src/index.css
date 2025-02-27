@@ -23,3 +23,7 @@ body{
 .templates-bg{
   background-color: white;
 }
+
+.selector-bg{
+  background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
+}
