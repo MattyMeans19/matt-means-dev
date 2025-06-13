@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@import "tailwindcss-intersect";
+
+body{
+background-color: #6b636bbb;
+background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+}
+
+.pattern{
+  background-color: #074215;
+  background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+}
