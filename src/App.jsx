@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Folder from "/icons8-folder-48.png"
+import Folder from "/icons8-folder-48.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { NavLink } from 'react-router';
