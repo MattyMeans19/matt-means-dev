@@ -3,11 +3,28 @@
 @import "tailwindcss-intersect";
 
 body{
-background-color: #6b636bbb;
-background-image: url("https://www.transparenttextures.com/patterns/dimension.png");
+background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
 }
 
 .pattern{
   background-color: #074215;
   background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+}
+
+.passion-one-regular {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.passion-one-bold {
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.passion-one-black {
+  font-family: "Passion One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
