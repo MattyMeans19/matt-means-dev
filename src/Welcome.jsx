@@ -18,14 +18,14 @@ function Welcome(){
 
     return(
         <div className={[`border-10 border-green-700 rounded-2xl col-start-3 col-span-3 row-start-1 mt-[10%] ${isActive ? 'visible' : 'hidden'} 
-        ${minimized ? 'bottom-0 h-[5%] z-1 w-[15%] col-start-3' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'}`]}>
+        ${minimized ? 'absolute bottom-0 h-[5%] z-1 w-[15%] ml-[7%] ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'}`]}>
             <TopBar 
                 icon= {CMDicon}
                 name= "Welcome!"
                 onClose={close}
                 onMinimize={MinimizedClicked}
             />
-            <div className={[`py-20 px-15 bg-black text-white flex flex-col gap-15 text-4xl jersey-10-regular `]}>
+            <div className="py-20 px-15 bg-black text-white flex flex-col gap-15 text-4xl jersey-10-regular">
                 <span>Hello!</span>
                 <span>Thanks for visiting my webpage. Click on an icon to see any relevant information!</span>
                 <span>I had a lot of fun building the webpage, and I hope you have as much fun exploring it!</span>
