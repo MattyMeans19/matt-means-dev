@@ -18,7 +18,7 @@ function Welcome(){
 
     return(
         <div className={[`border-10 border-green-700 rounded-2xl col-start-3 col-span-3 row-start-1 mt-[10%] ${isActive ? 'visible' : 'hidden'} 
-        ${minimized ? 'absolute bottom-0 h-[5%] z-1 w-[15%] ml-[7%] ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'}`]}>
+        ${minimized ? 'absolute bottom-0 h-[5%] z-1 w-[15%] ml-[5%] ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'}`]}>
             <TopBar 
                 icon= {CMDicon}
                 name= "Welcome!"
