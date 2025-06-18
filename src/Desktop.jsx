@@ -6,7 +6,7 @@ function Desktop(props){
     const [apps] = useState(props.apps);
 
     return(
-        <div className="basis-1/3 flex flex-col place-items-start gap-5">
+        <div className="basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
             {apps.map((app, index) =>(
                 <Icon 
                     key = {index}

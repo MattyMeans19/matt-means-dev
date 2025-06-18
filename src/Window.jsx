@@ -22,7 +22,6 @@ function Window(props){
 
     const handleMouseDown = (e) => {
         setIsDragging(true);
-        console.log(e);
         offset.current = {
         x: e.clientX - position.x,
         y: e.clientY - position.y,
@@ -59,9 +58,9 @@ function Window(props){
 
 
     return(
-        <div className={[`border-10 border-green-700 rounded-2xl w-${width} h-${height} ${isActive ? 'visible' : 'hidden'} 
-        ${minimized ? 'fixed bottom-0 h-[5%] z-1 w-[15%] ml-[5%] ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'}
-        absolute left-${position.x} top-${position.y} `]}>
+        <div className={[`border-10 border-green-700 rounded-2xl ${isActive ? 'visible' : 'hidden'} 
+        ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'}
+         h-[600px] w-[300px] pb-10`]}>
             <TopBar 
                 icon= {CMDicon}
                 name= "Welcome!"
