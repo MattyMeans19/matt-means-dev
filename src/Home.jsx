@@ -1,18 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import TaskBar from "./TaskBar";
 import Desktop from "./Desktop";
-import Welcome from "./Welcome";
+import Window from "./Window";
+import {apps} from "./Apps";
 
 function Home(){
-    return(
-        <div className="grid grid-cols-6">
-            <Welcome />
+    const [allApps] = useState(apps);
 
-            <div className="p-5 col-start-1 col-span-full row-start-1">
-                <Desktop />   
+    return(
+        <div className="max-h-screen">
+            <div className="flex flex-wrap p-5">
+                <Desktop 
+                    apps = {allApps}
+                />
             </div>
+
+            {allApps.map((app, index) =>(
+                <Window 
+                    key = {index}
+                    name = {app.name}
+                    icon = {app.icon}
+                    visibility = {app.visibility}
+                    content = {app.content}
+                    index = {app.index - 1}
+                    height = {app.height}
+                    width = {app.width}
+                />
+            ))}
             
-            <div className="pb-[5%] col-span-full">
+            <div className="pb-[5%]">
                 <TaskBar />
             </div>
         </div>

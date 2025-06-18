@@ -1,24 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import Icon from "./Icon";
-import DocumentIcon from "/icons8-document-69.png";
-import SkillsIcon from "/icons8-skills-64.png";
-import PortfolioIcon from "/icons8-portfolio-32.png"
 
-function Desktop(){
+
+function Desktop(props){
+    const [apps] = useState(props.apps);
+
     return(
-        <div className="flex flex-col gap-5">
-            <Icon 
-                icon = {DocumentIcon}
-                name = "About Me"
-            />
-            <Icon 
-                icon = {SkillsIcon}
-                name = "Skills"
-            />
-            <Icon 
-                icon = {PortfolioIcon}
-                name = "Portfolio"
-            />
+        <div className="basis-1/3 flex flex-col place-items-start gap-5">
+            {apps.map((app, index) =>(
+                <Icon 
+                    key = {index}
+                    name = {app.name}
+                    icon = {app.icon}
+                    visibility = {app.visibility}
+                    index = {app.index - 1}
+                />
+            ))}
         </div>
     )
 }
