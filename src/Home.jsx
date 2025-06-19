@@ -8,14 +8,13 @@ function Home(){
     const [allApps] = useState(apps);
 
     return(
-        <div className="h-screen w-screen flex flex-nowrap">
+        <div className="h-screen w-screen overflow-hidden">
             <div className="flex flex-wrap p-5 max-h-screen">
                 <Desktop 
                     apps = {allApps}
                 />
             </div>
 
-            <div className="w-full">
                 {allApps.map((app, index) =>(
                     <Window 
                         key = {index}
@@ -28,7 +27,7 @@ function Home(){
                         width = {app.width}
                     />
                 ))}                
-            </div>
+            
 
             
             <div className="pb-[5%]">

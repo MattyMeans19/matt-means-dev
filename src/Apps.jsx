@@ -11,8 +11,8 @@ export const apps = [
         content: <Welcome />,
         visibility: true,
         index: 1, 
-        height: "300px",
-        width: "300px"
+        height: "h-[600px]",
+        width: "w-[600px]"
     },
     {
         name: "About Me",
@@ -20,8 +20,8 @@ export const apps = [
         content: "This will be the About Me Document",
         visibility: false,
         index: 2, 
-        height: "300px",
-        width: "600px"
+        height: "h-[300px]",
+        width: "w-[600px]"
     },
     {
         name: "Skills",
@@ -29,8 +29,8 @@ export const apps = [
         content: "This will be the Skills App",
         visibility: false,
         index: 3, 
-        height: "500px",
-        width: "500px"
+        height: "h-[500px]",
+        width: "w-[500px]"
     },
     {
         name: "Portfolio",
@@ -38,8 +38,8 @@ export const apps = [
         content: "This will be the Portfolio App",
         visibility: false,
         index: 4, 
-        height: "600px",
-        width: "600px"
+        height: "h-[600px]",
+        width: "w-[600px]"
     }
 ]
 
