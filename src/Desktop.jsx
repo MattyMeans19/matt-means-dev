@@ -17,7 +17,8 @@ function Desktop(){
             minimized: false,
             id: 1, 
             height: "h-[600px]",
-            width: "w-[600px]"
+            width: "w-[600px]",
+            isFocus: true        
         },
         {
             name: "About Me",
@@ -26,7 +27,8 @@ function Desktop(){
             minimized: false,
             id: 2, 
             height: "h-[300px]",
-            width: "w-[600px]"
+            width: "w-[600px]",
+            isFocus: false        
         },
         {
             name: "Skills",
@@ -35,7 +37,8 @@ function Desktop(){
             minimized: false,
             id: 3, 
             height: "h-[500px]",
-            width: "w-[500px]"
+            width: "w-[500px]",
+            isFocus: false        
         },
         {
             name: "Portfolio",
@@ -44,7 +47,8 @@ function Desktop(){
             minimized: false,
             id: 4, 
             height: "h-[600px]",
-            width: "w-[600px]"
+            width: "w-[600px]",
+            isFocus: false        
         }
     ])
 
@@ -53,9 +57,10 @@ function Desktop(){
         const appIndex = updatedApp.findIndex(app => app.id === index);
 
         if (appIndex !== -1) {
-        updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: true };
+        updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: true};
         appUpdate(updatedApp);
         }
+        bringToFront(appIndex)
     }; 
     
     const closeApp = (index) => {
@@ -63,7 +68,7 @@ function Desktop(){
         const appIndex = updatedApp.findIndex(app => app.id === index);
 
         if (appIndex !== -1) {
-        updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: false };
+        updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: false, minimized:false, isFocus: false};
         appUpdate(updatedApp);
         }
     }; 
@@ -88,10 +93,20 @@ function Desktop(){
         }
     }; 
 
+    const bringToFront = (index) => {
+        appUpdate(
+            apps.map((app) =>{
+                app.id === index
+                ? {...apps, isFocus: true}
+                : {...apps, isFocus: false}
+            })
+        )
+    };
+
     return(
         <div className="h-screen">
 
-            <div className="basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
+            <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
                 {apps.map((app, index) =>(
                     <Icon 
                         key = {index}
@@ -114,8 +129,10 @@ function Desktop(){
                     id = {app.id}
                     height = {app.height}
                     width = {app.width}
+                    focus = {app.isFocus}
                     close = {closeApp}
                     onMinimized={minimizeApp}
+                    clicked = {bringToFront}
                 />
             ))} 
 
