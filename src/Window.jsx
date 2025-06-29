@@ -45,11 +45,13 @@ function Window(props){
             allowAnyClick="false"
             handle=".handler"
             axis="both"
-            defaultPosition={{x: 500, y: 0}}
+            defaultPosition={{x: 500, y: 0, z: 10}}
+            
         >
-            <div ref={nodeRef} className="handler" onClick={() => (bringToFront())}>
-                <div className={[`border-10 border-green-700 rounded-t-2xl select-none ${isActive ? 'visible' : 'hidden'} 
-                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} ${width}`]}>
+            <div ref={nodeRef} className={[`relative ${focused ? 'z-20' : 'z-10'}`]}>
+                <div className={[`handler border-10 border-green-700 rounded-t-2xl select-none ${isActive ? 'visible' : 'hidden'} 
+                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} ${width}`]}
+                    >
                    <TopBar 
                         icon= {props.icon}
                         name= {props.name}
@@ -59,8 +61,8 @@ function Window(props){
                     /> 
                 </div>    
                 <div className={[`border-10 border-green-700 rounded-b-2xl select-none ${isActive ? 'visible' : 'hidden'} 
-                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} absolute ${width} ${height} overflow-y-clip
-                    ${focused ? 'z-20' : 'z-10'}`]}>  
+                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} absolute ${width} ${height} overflow-y-clip`]}
+                    onClick={() => (bringToFront())}>  
                     {apps[props.id - 1]}  
                 </div> 
             </div>

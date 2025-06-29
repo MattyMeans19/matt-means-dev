@@ -60,7 +60,7 @@ function Desktop(){
         updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: true};
         appUpdate(updatedApp);
         }
-        bringToFront(appIndex)
+        bringToFront(index)
     }; 
     
     const closeApp = (index) => {
@@ -94,17 +94,16 @@ function Desktop(){
     }; 
 
     const bringToFront = (index) => {
-        appUpdate(
-            apps.map((app) =>{
-                app.id === index
-                ? {...apps, isFocus: true}
-                : {...apps, isFocus: false}
-            })
-        )
+        console.log("here")
+        appUpdate( prevApp =>
+            prevApp.map((app) => 
+                (app.id === index ? {...app, isFocus: true } : {...app, isFocus: false})
+            )
+        );
     };
 
     return(
-        <div className="h-screen">
+        <div className="max-h-screen absolute z-30">
 
             <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
                 {apps.map((app, index) =>(
@@ -118,8 +117,9 @@ function Desktop(){
                     />
                 ))}
             </div>
-
-            {apps.map((app, index) =>(
+            
+            <div className="absolute z-30">
+              {apps.map((app, index) =>(
                 <Window 
                     key = {index}
                     name = {app.name}
@@ -134,7 +134,9 @@ function Desktop(){
                     onMinimized={minimizeApp}
                     clicked = {bringToFront}
                 />
-            ))} 
+            ))}   
+            </div>
+            
 
             <div className="fixed bottom-0 right-[10%] h-[4.65%] w-[85%] z-2">
                 <div className="flex flex-nowrap gap-1">
@@ -147,6 +149,7 @@ function Desktop(){
                             minimized= {app.minimized}
                             id = {app.id}
                             maximize= {maximizeApp}
+                            focus= {bringToFront}
                             close = {closeApp}
                         />
                 ))}
