@@ -5,7 +5,9 @@ import PortfolioIcon from "/icons8-portfolio-32.png";
 import CMDIcon from "/icons8-command-64.png";
 import Icon from "./Icon";
 import Window from "./Window";
+import TaskBar from "./TaskBar";
 import TaskBarItem from "./TaskbarItem";
+
 
 
 function Desktop(){
@@ -26,8 +28,8 @@ function Desktop(){
             visibility: false,
             minimized: false,
             id: 2, 
-            height: "h-[300px]",
-            width: "w-[600px]",
+            height: "h-[500px]",
+            width: "w-[800px]",
             isFocus: false        
         },
         {
@@ -36,8 +38,8 @@ function Desktop(){
             visibility: false,
             minimized: false,
             id: 3, 
-            height: "h-[500px]",
-            width: "w-[500px]",
+            height: "h-[800px]",
+            width: "w-[1000px]",
             isFocus: false        
         },
         {
@@ -46,8 +48,8 @@ function Desktop(){
             visibility: false,
             minimized: false,
             id: 4, 
-            height: "h-[600px]",
-            width: "w-[600px]",
+            height: "h-[800px]",
+            width: "w-[1200px]",
             isFocus: false        
         }
     ])
@@ -103,7 +105,7 @@ function Desktop(){
     };
 
     return(
-        <div className="max-h-screen absolute z-30">
+        <div className="h-screen w-screen self-start overflow-clip absolute z-30 desktop1">
 
             <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
                 {apps.map((app, index) =>(
@@ -137,9 +139,12 @@ function Desktop(){
             ))}   
             </div>
             
+            <div className="pb-[5%] fixed z-40">
+                     <TaskBar />
+            </div>
 
-            <div className="fixed bottom-0 right-[10%] h-[4.65%] w-[85%] z-2">
-                <div className="flex flex-nowrap gap-1">
+            <div className="fixed bottom-0 right-[10%] h-[4.65%] w-[85%] z-50">
+                <div className="flex flex-nowrap gap-1 max-h-[100%]">
                     {apps.map((app, index) =>(
                         <TaskBarItem 
                             key = {index}

@@ -19,8 +19,8 @@ function TaskBarItem(props){
     }
     
     return(
-        <div className={[`passion-one-bold basis-1/8 z-10 border-5 border-double px-2 bg-gray-300 rounded-lg pt-2 ${isActive ? 'visible' : 'hidden'} hover:bg-gray-400`]}>
-            <div className="relative z-21 w-[90%] flex flex-nowrap gap-5" onClick={() =>(Clicked())}>
+        <div className={[`passion-one-bold basis-1/8 border-5 border-double px-2 bg-gray-300 rounded-lg pt-2 ${isActive ? 'visible' : 'hidden'} hover:bg-gray-400`]}>
+            <div className="relative z-50 w-[90%] flex flex-nowrap gap-5" onClick={() =>(Clicked())}>
                 <img src={props.icon} className="size-5 "/>
                 <h2 className=" w-full text-nowrap hover:cursor-default">{props.name}</h2> 
             </div>

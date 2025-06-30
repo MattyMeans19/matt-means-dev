@@ -2,6 +2,9 @@ import React, {useState, useEffect, useRef} from "react";
 import TopBar from "./TopBar";
 import Draggable, {DraggableCore} from "react-draggable";
 import Welcome from "./Welcome";
+import About from "./About";
+import Skills from "./Skills";
+import Portfolio from "./Portfolio";
 
 function Window(props){
     const [isActive, ToggleActive] = useState(props.visibility);
@@ -10,7 +13,7 @@ function Window(props){
     const [width] = useState(props.width);
     const [height] = useState(props.height);
     const nodeRef = useRef(null);
-    const apps = [<Welcome/>, "This is the About Me", "This is Skills", "This is my Portfolio"];
+    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />];
 
     useEffect(() => {
         if(isActive !== props.visibility){
@@ -48,7 +51,7 @@ function Window(props){
             defaultPosition={{x: 500, y: 0, z: 10}}
             
         >
-            <div ref={nodeRef} className={[`relative ${focused ? 'z-20' : 'z-10'}`]}>
+            <div ref={nodeRef} className={[`absolute ${focused ? 'z-20' : 'z-10'}`]}>
                 <div className={[`handler border-10 border-green-700 rounded-t-2xl select-none ${isActive ? 'visible' : 'hidden'} 
                     ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} ${width}`]}
                     >

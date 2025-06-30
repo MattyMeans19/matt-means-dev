@@ -6,6 +6,10 @@ body{
 background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
 }
 
+.desktop1{
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
+}
+
 .pattern{
   background-color: #074215;
   background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
