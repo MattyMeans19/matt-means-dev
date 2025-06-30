@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import TaskBarItem from "./TaskbarItem";
 
-function TaskBar(){
+function TaskBar(props){
     const [time, ChangeTime] = useState();
     const [menuActive, changeMenuActive] = useState(false)
     const [openApps, alterApps] = useState([])
@@ -14,10 +14,16 @@ function TaskBar(){
         return () => clearInterval(TimeCount);
     }, [])
 
+    function menuClicked(){
+        changeMenuActive(!menuActive);
+        props.menuActive()
+    }
 
     return(
         <div className="flex flex-nowrap justify-between fixed bottom-0 h-[5%] w-screen bg-emerald-800 rounded-t-sm">
-            <button className={[`bg-emerald-400 w-[5%] rounded-t-sm hover:opacity-85 ${menuActive ? 'opacity-100' : 'opacity-50'} passion-one-regular text-2xl`]}>Menu</button>
+            <button className={[`bg-emerald-400 w-[5%] rounded-t-sm hover:opacity-85 ${menuActive ? 'opacity-100' : 'opacity-50'} passion-one-regular text-2xl`]}
+            onClick={() =>(menuClicked())}
+            >Menu</button>
             <div className="w-full flex flex-nowrap">
 
             </div>

@@ -54,6 +54,8 @@ function Desktop(){
         }
     ])
 
+    const [menuActive, changeMenuActive] = useState(false);
+
     const openApp = (index) => {
         const updatedApp = [...apps];
         const appIndex = updatedApp.findIndex(app => app.id === index);
@@ -104,8 +106,18 @@ function Desktop(){
         );
     };
 
+    function menuView(){
+        changeMenuActive(!menuActive);
+    }
+
     return(
         <div className="h-screen w-screen self-start overflow-clip absolute z-30 desktop1">
+
+            <div className={[`border-10 border-green-700 bg-gray-200 rounded-t-4xl w-[15%] absolute z-30 bottom-12 h-[60%] ${menuActive ? 'visible animate-fade-up animate-once animate-duration-500 animate-ease-linear' : 'hidden'} flex flex-col gap-15 p-10`]}>
+                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5">⚙️ Settings</button>
+                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5">🕹️ Games</button>
+                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5">📁 Templates</button>
+            </div>
 
             <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
                 {apps.map((app, index) =>(
@@ -140,7 +152,9 @@ function Desktop(){
             </div>
             
             <div className="pb-[5%] fixed z-40">
-                     <TaskBar />
+                     <TaskBar 
+                     menuActive = {menuView}
+                     />
             </div>
 
             <div className="fixed bottom-0 right-[10%] h-[4.65%] w-[85%] z-50">

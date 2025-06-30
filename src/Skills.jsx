@@ -14,7 +14,7 @@ function Skills(){
             </div>
             <div className="col-start-5 col-span-4 bg-amber-100 border-3 p-2 rounded-2xl">
                 <h1 className="text-4xl text-center underline mb-5">Back End</h1>
-                <p className="text-2xl p-5 border-5 border-double mb-15">Accessing databases and external resources isn't a problem for me! Whether it's for a blog site, nusiness, or e-comemrce, I can build all the functionality to meet your needs!</p>
+                <p className="text-2xl p-5 border-5 border-double mb-15">Accessing databases and external resources isn't a problem for me! Whether it's for a blog site, business, or e-comemrce, I can build all the functionality to meet your needs!</p>
                 <ul className="ml-5 list-disc text-2xl">
                     <li>Proficient with SQL database language</li>
                     <li>Can build custom APIs or leverage exisiting ones</li>
