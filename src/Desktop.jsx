@@ -100,6 +100,7 @@ function Desktop(){
                         name = {app.name}
                         icon = {app.icon}
                         id = {app.id}
+                        onDesktop = {app.onDesktop}
                         onOpen={openApp}
                     />
                 ))}
