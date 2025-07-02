@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import DocIcon from "/icons8-document-69.png";
 import SkillsIcon from "/icons8-skills-64.png";
 import PortfolioIcon from "/icons8-portfolio-32.png";
@@ -7,11 +7,12 @@ import Icon from "./Icon";
 import Window from "./Window";
 import TaskBar from "./TaskBar";
 import TaskBarItem from "./TaskbarItem";
+import Menu from "./Menu";
 
 
 
 function Desktop(){
-    const [apps, appUpdate] = useState([
+    const [apps] = useState([
         {
             name: "Welcome",
             icon: CMDIcon,
@@ -113,14 +114,27 @@ function Desktop(){
         changeMenuActive(!menuActive);
     }
 
-    return(
-        <div className="h-screen w-screen self-start overflow-clip absolute z-30 desktop1">
+    function shutMenu(){
+        if(menuActive !== false){
+            document.body.addEventListener('click', (event) => {
+            const menu = document.getElementById('menu');
 
-            <div className={[`border-10 border-green-700 bg-gray-200 rounded-t-4xl w-[15%] absolute z-30 bottom-12 h-[60%] ${menuActive ? 'visible animate-fade-up animate-once animate-duration-500 animate-ease-linear' : 'hidden'} flex flex-col gap-15 p-10`]}>
-                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5">⚙️ Settings</button>
-                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5">🕹️ Games</button>
-                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5">📁 Templates</button>
-            </div>
+        if(event.target !== menu && !menu.contains(event.target)){
+            console.log("here");
+            menuView();
+            }
+        }, {once : true});
+        }
+    }
+
+
+
+    return(
+        <div className="h-screen w-screen self-start overflow-clip absolute z-30 desktop1" onClick={() => (shutMenu())}>
+
+            <Menu 
+                active = {menuActive}
+            />
 
             <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
                 {apps.map((app, index) =>(
