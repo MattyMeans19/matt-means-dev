@@ -25,7 +25,6 @@ function Desktop(){
         {
             name: "About Me",
             icon: DocIcon,
-            visibility: false,
             minimized: false,
             id: 2, 
             height: "h-[500px]",
@@ -35,7 +34,6 @@ function Desktop(){
         {
             name: "Skills",
             icon: SkillsIcon,
-            visibility: false,
             minimized: false,
             id: 3, 
             height: "h-[800px]",
@@ -45,7 +43,6 @@ function Desktop(){
         {
             name: "Portfolio",
             icon: PortfolioIcon,
-            visibility: false,
             minimized: false,
             id: 4, 
             height: "h-[800px]",
@@ -54,54 +51,60 @@ function Desktop(){
         }
     ])
 
+    const [windows, updateWindows] = useState([apps[0]])
+
     const [menuActive, changeMenuActive] = useState(false);
 
-    const openApp = (index) => {
-        const updatedApp = [...apps];
-        const appIndex = updatedApp.findIndex(app => app.id === index);
+    const openApp = (id) => {
+        let index = id - 1;
+        const newWindows = [...windows];
+        const openWindows = windows.filter( window => window.id === id);
 
-        if (appIndex !== -1) {
-        updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: true};
-        appUpdate(updatedApp);
+        if(openWindows.length === 0){
+            newWindows.push(apps[index]);
+            updateWindows(newWindows);
+            console.log(newWindows)
         }
-        bringToFront(index)
+
+        bringToFront(id)
     }; 
     
-    const closeApp = (index) => {
-        const updatedApp = [...apps];
-        const appIndex = updatedApp.findIndex(app => app.id === index);
+    const closeApp = (id) => {
+        const newWindows = [...windows]
+        const windowIndex = newWindows.findIndex(window => window.id === id);
 
-        if (appIndex !== -1) {
-        updatedApp[appIndex] = { ...updatedApp[appIndex], visibility: false, minimized:false, isFocus: false};
-        appUpdate(updatedApp);
+        if (windowIndex > -1){
+            newWindows.splice(windowIndex, 1);
+            updateWindows(newWindows);
+        }
+
+    }; 
+
+    const maximizeApp = (id) => {
+        const newWindows = [...windows];
+        const windowIndex = newWindows.findIndex(window => window.id === id);
+
+        if (windowIndex !== -1) {
+        newWindows[windowIndex] = { ...newWindows[windowIndex], minimized: false };
+        updateWindows(newWindows);
         }
     }; 
 
-    const maximizeApp = (index) => {
-        const updatedApp = [...apps];
-        const appIndex = updatedApp.findIndex(app => app.id === index);
+    const minimizeApp = (id) => {
+        const newWindows = [...windows];
+        const windowIndex = newWindows.findIndex(window => window.id === id);
 
-        if (appIndex !== -1) {
-        updatedApp[appIndex] = { ...updatedApp[appIndex], minimized: false };
-        appUpdate(updatedApp);
+        if (windowIndex !== -1) {
+        newWindows[windowIndex] = { ...newWindows[windowIndex], minimized: true };
+        updateWindows(newWindows);
         }
     }; 
 
-    const minimizeApp = (index) => {
-        const updatedApp = [...apps];
-        const appIndex = updatedApp.findIndex(app => app.id === index);
-
-        if (appIndex !== -1) {
-        updatedApp[appIndex] = { ...updatedApp[appIndex], minimized: true };
-        appUpdate(updatedApp);
-        }
-    }; 
-
-    const bringToFront = (index) => {
+    const bringToFront = (id) => {
         console.log("here")
-        appUpdate( prevApp =>
-            prevApp.map((app) => 
-                (app.id === index ? {...app, isFocus: true } : {...app, isFocus: false})
+        updateWindows( prevWindow =>
+            prevWindow.map((window) => 
+                (window.id === id ? {...window, isFocus: true } : {...window, isFocus: false})
             )
         );
     };
@@ -125,7 +128,6 @@ function Desktop(){
                         key = {index}
                         name = {app.name}
                         icon = {app.icon}
-                        visibility = {app.visibility}
                         id = {app.id}
                         onOpen={openApp}
                     />
@@ -133,12 +135,11 @@ function Desktop(){
             </div>
             
             <div className="absolute z-30">
-              {apps.map((app, index) =>(
+              {windows.map((app, index) =>(
                 <Window 
                     key = {index}
                     name = {app.name}
                     icon = {app.icon}
-                    visibility = {app.visibility}
                     minimized= {app.minimized}
                     id = {app.id}
                     height = {app.height}
@@ -159,14 +160,13 @@ function Desktop(){
 
             <div className="fixed bottom-0 right-[10%] h-[4.65%] w-[85%] z-50">
                 <div className="flex flex-nowrap gap-1 max-h-[100%]">
-                    {apps.map((app, index) =>(
+                    {windows.map((window, index) =>(
                         <TaskBarItem 
                             key = {index}
-                            name = {app.name}
-                            icon = {app.icon}
-                            visibility = {app.visibility}
-                            minimized= {app.minimized}
-                            id = {app.id}
+                            name = {window.name}
+                            icon = {window.icon}
+                            minimized= {window.minimized}
+                            id = {window.id}
                             maximize= {maximizeApp}
                             focus= {bringToFront}
                             close = {closeApp}

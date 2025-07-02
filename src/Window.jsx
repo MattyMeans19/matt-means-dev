@@ -7,7 +7,6 @@ import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 
 function Window(props){
-    const [isActive, ToggleActive] = useState(props.visibility);
     const [minimized, ToggleMinimized] = useState(props.minimized);
     const [focused, updateFocused] = useState(props.focus);
     const [width] = useState(props.width);
@@ -16,16 +15,13 @@ function Window(props){
     const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />];
 
     useEffect(() => {
-        if(isActive !== props.visibility){
-            ToggleActive(props.visibility);
-        }
         if(minimized !== props.minimized){
             ToggleMinimized(props.minimized);
         }
         if(focused !== props.focus){
             updateFocused(props.focus);
         }
-    }, [isActive, props.visibility, minimized, props.minimized, focused, props.focus])
+    }, [minimized, props.minimized, focused, props.focus])
 
 
     function close(){
@@ -52,7 +48,7 @@ function Window(props){
             
         >
             <div ref={nodeRef} className={[`absolute ${focused ? 'z-20' : 'z-10'}`]}>
-                <div className={[`handler border-10 border-green-700 rounded-t-2xl select-none ${isActive ? 'visible' : 'hidden'} 
+                <div className={[`handler border-10 border-green-700 rounded-t-2xl select-none
                     ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} ${width}`]}
                     >
                    <TopBar 
@@ -63,7 +59,7 @@ function Window(props){
                         onMinimize={MinimizedClicked}
                     /> 
                 </div>    
-                <div className={[`border-10 border-green-700 rounded-b-2xl select-none ${isActive ? 'visible' : 'hidden'} 
+                <div className={[`border-10 border-green-700 rounded-b-2xl select-none 
                     ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} absolute ${width} ${height} overflow-y-clip`]}
                     onClick={() => (bringToFront())}>  
                     {apps[props.id - 1]}  
