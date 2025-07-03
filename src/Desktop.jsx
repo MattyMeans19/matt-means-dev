@@ -87,10 +87,11 @@ function Desktop(){
 
 
     return(
-        <div className="h-screen w-screen self-start overflow-clip absolute z-30 desktop1" onClick={() => (shutMenu())}>
+        <div className="h-screen w-screen self-start overflow-clip absolute z-30 neon" onClick={() => (shutMenu())}>
 
             <Menu 
                 active = {menuActive}
+                open = {openApp}
             />
 
             <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
@@ -107,9 +108,9 @@ function Desktop(){
             </div>
             
             <div className="absolute z-30">
-              {windows.map((app, index) =>(
+              {windows.map((app) =>(
                 <Window 
-                    key = {index}
+                    key = {app.id}
                     name = {app.name}
                     icon = {app.icon}
                     minimized= {app.minimized}

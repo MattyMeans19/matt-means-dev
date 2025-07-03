@@ -6,8 +6,23 @@ body{
 background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
 }
 
-.desktop1{
+.circles{
   background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
+}
+.sunset{
+  background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png"), linear-gradient(0deg,rgba(237, 166, 74, 1) 0%, rgba(2, 144, 163, 1) 49%, rgba(212, 118, 227, 1) 100%);
+}
+.flowers{
+  background-image: url("https://www.transparenttextures.com/patterns/flowers.png"), linear-gradient(90deg,rgba(42, 155, 153, 1) 0%, rgba(178, 199, 87, 1) 50%, rgba(222, 83, 237, 1) 100%);
+}
+.sunburst{
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), radial-gradient(circle,rgba(199, 113, 0, 1) 0%, rgba(122, 112, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
+.parallelograms{
+  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png"), linear-gradient(31deg,rgba(255, 0, 0, 1) 0%, rgba(0, 176, 0, 1) 50%, rgba(0, 0, 255, 1) 100%);
+}
+.neon{
+  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png"), linear-gradient(60deg,rgba(0, 238, 255, 1) 0%, rgba(255, 0, 212, 1) 50%, rgba(255, 247, 0, 1) 100%);
 }
 
 .pattern{

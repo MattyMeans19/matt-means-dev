@@ -53,8 +53,8 @@ export const apps = [
             icon: SettingsIcon,
             minimized: false,
             id: 5, 
-            height: "h-[600px]",
-            width: "w-[600px]",
+            height: "h-[800px]",
+            width: "w-[1000px]",
             isFocus: false,
             onDesktop: false      
         },

@@ -5,6 +5,7 @@ import Welcome from "./Welcome";
 import About from "./About";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
+import Settings from "./Settings";
 
 function Window(props){
     const [minimized, ToggleMinimized] = useState(props.minimized);
@@ -12,7 +13,7 @@ function Window(props){
     const [width] = useState(props.width);
     const [height] = useState(props.height);
     const nodeRef = useRef(null);
-    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />];
+    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings />, "RPS", "Pinball", "Solitaire", "SBB", "SBM", "SBP"];
 
     useEffect(() => {
         if(minimized !== props.minimized){
