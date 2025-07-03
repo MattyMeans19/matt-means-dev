@@ -3,7 +3,7 @@ import ME from "/ME.jpg";
 
 function About(){
     return(
-        <div className="bg-white border-2 size-full overflow-y-scroll text-wrap p-2 text-center passion-one-black">
+        <div className="bg-white border-2 border-black size-full overflow-y-scroll text-wrap p-2 text-center passion-one-black">
             <h1 className="text-4xl">Hi, my name is Matthew Means,</h1>
             <img src={ME} className="size-100 place-self-center rounded-full border-10 border-double border-emerald-600"/>
             <h2 className="text-2xl mb-15">but you can call me Matt!</h2>

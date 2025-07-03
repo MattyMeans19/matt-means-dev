@@ -3,7 +3,7 @@ import React from "react";
 function Skills(){
     return(
         <div className="bg-emerald-300 size-full grid grid-cols-8 gap-15 p-5 passion-one-regular overflow-y-scroll">
-            <div className="col-start-1 col-span-4 bg-amber-100 border-3 p-2 rounded-2xl">
+            <div className="col-start-1 col-span-4 bg-amber-100 border-3 border-black p-2 rounded-2xl">
                 <h1 className="text-4xl text-center underline mb-5">Front End</h1>
                 <p className="text-2xl p-5 border-5 border-double mb-15">From stylizing things like fonts and colors, to making basic functionality like a button click. This webpage is purely front end, and a great example of what I can do!</p>
                 <ul className="ml-5 list-disc text-2xl">
@@ -12,7 +12,7 @@ function Skills(){
                     <li>Experienced with JavaScript Frameworks like Node, Express, jQuery, and React(this webpage uses React!)</li>
                 </ul>
             </div>
-            <div className="col-start-5 col-span-4 bg-amber-100 border-3 p-2 rounded-2xl">
+            <div className="col-start-5 col-span-4 bg-amber-100 border-3 border-black p-2 rounded-2xl">
                 <h1 className="text-4xl text-center underline mb-5">Back End</h1>
                 <p className="text-2xl p-5 border-5 border-double mb-15">Accessing databases and external resources isn't a problem for me! Whether it's for a blog site, business, or e-comemrce, I can build all the functionality to meet your needs!</p>
                 <ul className="ml-5 list-disc text-2xl">
@@ -22,7 +22,7 @@ function Skills(){
                 </ul>                
             </div>
 
-            <div className="border-10 border-double col-span-full bg-amber-100">
+            <div className="border-10 border-double border-black col-span-full bg-amber-100">
                 <h1 className="text-4xl text-center underline mb-1">Other Skills</h1>
                 <h2 className="text-2xl text-center mb-5">These skills aren't specific to web-design, but they are useful!</h2>
                 <ul className="ml-15 list-disc text-2xl">

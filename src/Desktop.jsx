@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import { apps } from "./Apps";
 
 
-function Desktop(){
+function Desktop(props){
 
     const [windows, updateWindows] = useState([apps[0]])
 
@@ -22,6 +22,10 @@ function Desktop(){
             newWindows.push(apps[index]);
             updateWindows(newWindows);
             console.log(newWindows)
+        }
+
+        if(id > 4){
+            menuView();
         }
 
         bringToFront(id)
@@ -84,10 +88,16 @@ function Desktop(){
         }
     }
 
+    function updateBG(newBG){
+        props.bgUpdate(newBG);
+    }
 
+    function newSysColor(newColor){
+        props.updateSysColor(newColor)
+    }
 
     return(
-        <div className="h-screen w-screen self-start overflow-clip absolute z-30 neon" onClick={() => (shutMenu())}>
+        <div className={[`h-screen w-screen self-start overflow-clip absolute z-30 ${props.bg}`]} onClick={() => (shutMenu())}>
 
             <Menu 
                 active = {menuActive}
@@ -121,6 +131,10 @@ function Desktop(){
                     close = {closeApp}
                     onMinimized={minimizeApp}
                     clicked = {bringToFront}
+                    bgUpdate = {updateBG}
+                    borderColor = {props.borderColor}
+                    color = {props.syscolor}
+                    updateSysColor = {newSysColor}
                 />
             ))}   
             </div>
@@ -128,6 +142,7 @@ function Desktop(){
             <div className="pb-[5%] fixed z-40">
                      <TaskBar 
                      menuActive = {menuView}
+                     sysColor = {props.syscolor}
                      />
             </div>
 

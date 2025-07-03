@@ -4,7 +4,6 @@ import TaskBarItem from "./TaskbarItem";
 function TaskBar(props){
     const [time, ChangeTime] = useState();
     const [menuActive, changeMenuActive] = useState(false)
-    const [openApps, alterApps] = useState([])
     const month = new Date().getMonth();
     const day = new Date().getDate();
     const year = new Date().getFullYear();
@@ -20,8 +19,8 @@ function TaskBar(props){
     }
 
     return(
-        <div className="flex flex-nowrap justify-between fixed bottom-0 h-[5%] w-screen bg-emerald-800 rounded-t-sm">
-            <button className={[`bg-emerald-400 w-[5%] rounded-t-sm hover:opacity-85 ${menuActive ? 'opacity-100' : 'opacity-50'} passion-one-regular text-2xl`]}
+        <div className={[`flex flex-nowrap justify-between fixed bottom-0 h-[5%] w-screen ${props.sysColor} rounded-t-sm`]}>
+            <button className={[`bg-white w-[5%] rounded-t-sm hover:opacity-85 ${menuActive ? 'opacity-100' : 'opacity-50'} passion-one-regular text-2xl`]}
             onClick={() =>(menuClicked())}
             >Menu</button>
             <div className="w-full flex flex-nowrap">
