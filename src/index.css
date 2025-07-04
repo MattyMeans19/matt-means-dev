@@ -51,20 +51,32 @@ background-image: url("https://www.transparenttextures.com/patterns/swirl.png"),
   font-style: normal;
 }
 
-.passion-one-bold {
-  font-family: "Passion One", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.passion-one-black {
-  font-family: "Passion One", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
 .jersey-10-regular {
   font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barriecito-regular {
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.italianno-regular {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
 }

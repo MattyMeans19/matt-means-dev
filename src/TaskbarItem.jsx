@@ -12,7 +12,7 @@ function TaskBarItem(props){
     }
     
     return(
-        <div className={[`shrink passion-one-bold basis-1/8 border-5 border-double border-black px-2 bg-gray-300 rounded-lg pt-2 hover:bg-gray-400`]}>
+        <div className={[`shrink basis-1/8 border-5 border-double border-black px-2 bg-gray-300 rounded-lg pt-2 hover:bg-gray-400`]}>
             <div className="relative z-50 w-[90%] flex flex-nowrap gap-5" onClick={() =>(Clicked())}>
                 <img src={props.icon} className="size-5 "/>
                 <h2 className=" w-full text-nowrap hover:cursor-default">{props.name}</h2> 

@@ -13,7 +13,7 @@ function Window(props){
     const [width] = useState(props.width);
     const [height] = useState(props.height);
     const nodeRef = useRef(null);
-    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} />, "RPS", "Pinball", "Solitaire", "SBB", "SBM", "SBP"];
+    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} fontUpdate = {updateFont} />, "RPS", "Pinball", "Solitaire", "SBB", "SBM", "SBP"];
 
     useEffect(() => {
         if(minimized !== props.minimized){
@@ -42,6 +42,9 @@ function Window(props){
 
     function updateBG(newBG){
         props.bgUpdate(newBG);
+    }
+    function updateFont(newFont){
+        props.fontUpdate(newFont)
     }
 
 

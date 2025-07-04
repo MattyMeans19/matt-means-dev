@@ -28,7 +28,6 @@ function Desktop(props){
         }
 
         bringToFront(id)
-        console.log(props.sysColor)
     }; 
     
     const closeApp = (id) => {
@@ -89,6 +88,9 @@ function Desktop(props){
     function updateBG(newBG){
         props.bgUpdate(newBG);
     }
+    function updateFont(newFont){
+        props.fontUpdate(newFont);
+    }
 
 
 
@@ -128,6 +130,7 @@ function Desktop(props){
                     onMinimized={minimizeApp}
                     clicked = {bringToFront}
                     bgUpdate = {updateBG}
+                    fontUpdate = {updateFont}
                 />
             ))}   
             </div>
@@ -135,6 +138,7 @@ function Desktop(props){
             <div className="pb-[5%] fixed z-40">
                      <TaskBar 
                      menuActive = {menuView}
+                     active = {menuActive}
                      />
             </div>
 
