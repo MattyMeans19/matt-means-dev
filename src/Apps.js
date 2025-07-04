@@ -63,8 +63,8 @@ export const apps = [
             icon: GamesIcon,
             minimized: false,
             id: 6, 
-            height: "h-[500px]",
-            width: "w-[800px]",
+            height: "h-[90vh]",
+            width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
         },
@@ -73,8 +73,8 @@ export const apps = [
             icon: PinballIcon,
             minimized: false,
             id: 7, 
-            height: "h-[800px]",
-            width: "w-[1000px]",
+            height: "h-[90vh]",
+            width: "w-[100vw]",
             isFocus: false,
             onDesktop: false       
         },
@@ -83,8 +83,8 @@ export const apps = [
             icon: GamesIcon,
             minimized: false,
             id: 8, 
-            height: "h-[800px]",
-            width: "w-[1200px]",
+            height: "h-[90vh]",
+            width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
         },
@@ -93,8 +93,8 @@ export const apps = [
             icon: MediaIcon,
             minimized: false,
             id: 9, 
-            height: "h-[500px]",
-            width: "w-[800px]",
+            height: "h-[90vh]",
+            width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
         },
