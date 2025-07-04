@@ -2,6 +2,11 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+:root{
+  --sysColor: #008236;
+  --textColor: #0A0A0A;
+}
+
 body{
 background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
 }
@@ -23,6 +28,16 @@ background-image: url("https://www.transparenttextures.com/patterns/swirl.png"),
 }
 .neon{
   background-image: url("https://www.transparenttextures.com/patterns/hexellence.png"), linear-gradient(60deg,rgba(0, 238, 255, 1) 0%, rgba(255, 0, 212, 1) 50%, rgba(255, 247, 0, 1) 100%);
+}
+
+.syscolor{
+  background-color: var(--sysColor);
+}
+.syscolor-Border{
+  border-color: var(--sysColor);
+}
+.textcolor{
+  color: var(--textColor);
 }
 
 .pattern{

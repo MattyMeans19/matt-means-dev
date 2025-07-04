@@ -4,8 +4,8 @@ import BackgroundTile from "./BackgroundTile";
 
 
 function Settings(props){
-    const [sysColor, updateSysColor] = useState("#008236")
-    const [txtColor, updateTXTColor] = useState("#0c0a09")
+    const [sysColor, updateSysColor] = useState('#008236')
+    const [txtColor, updateTXTColor] = useState('#0a0a0a')
 
     function updateBG(newBG){
         props.bgUpdate(newBG);
@@ -14,12 +14,13 @@ function Settings(props){
     function newSysColor(){
         let newColor = document.getElementById("systemColor").value;
         updateSysColor(newColor);
-        props.changeSysColor(newColor);
+        document.documentElement.style.setProperty('--sysColor', newColor);
     }
 
-        function newTxtColor(){
+    function newTxtColor(){
         let newColor = document.getElementById("textColor").value;
         updateTXTColor(newColor);
+        document.documentElement.style.setProperty('--textColor', newColor);
     }
 
     return(

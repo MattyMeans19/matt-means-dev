@@ -5,7 +5,7 @@ function TopBar(props){
 
 
     return(
-        <div className={[`grid grid-cols-15 gap-2 relative z-21 ${props.color}`]}>
+        <div className={[`grid grid-cols-15 gap-2 relative z-2`]}>
             <img src={props.icon} className="size-10 col-start-1"></img>
             <h1 className="self-center ml-5 text-2xl text-nowrap">{props.name}</h1>
             <span className="col-start-3 col-span-11 w-full cursor-grab z-1"></span>

@@ -21,7 +21,6 @@ function Desktop(props){
         if(openWindows.length === 0){
             newWindows.push(apps[index]);
             updateWindows(newWindows);
-            console.log(newWindows)
         }
 
         if(id > 4){
@@ -29,6 +28,7 @@ function Desktop(props){
         }
 
         bringToFront(id)
+        console.log(props.sysColor)
     }; 
     
     const closeApp = (id) => {
@@ -63,7 +63,6 @@ function Desktop(props){
     }; 
 
     const bringToFront = (id) => {
-        console.log("here")
         updateWindows( prevWindow =>
             prevWindow.map((window) => 
                 (window.id === id ? {...window, isFocus: true } : {...window, isFocus: false})
@@ -81,7 +80,6 @@ function Desktop(props){
             const menu = document.getElementById('menu');
 
         if(event.target !== menu && !menu.contains(event.target)){
-            console.log("here");
             menuView();
             }
         }, {once : true});
@@ -92,9 +90,7 @@ function Desktop(props){
         props.bgUpdate(newBG);
     }
 
-    function newSysColor(newColor){
-        props.updateSysColor(newColor)
-    }
+
 
     return(
         <div className={[`h-screen w-screen self-start overflow-clip absolute z-30 ${props.bg}`]} onClick={() => (shutMenu())}>
@@ -132,9 +128,6 @@ function Desktop(props){
                     onMinimized={minimizeApp}
                     clicked = {bringToFront}
                     bgUpdate = {updateBG}
-                    borderColor = {props.borderColor}
-                    color = {props.syscolor}
-                    updateSysColor = {newSysColor}
                 />
             ))}   
             </div>
@@ -142,7 +135,6 @@ function Desktop(props){
             <div className="pb-[5%] fixed z-40">
                      <TaskBar 
                      menuActive = {menuView}
-                     sysColor = {props.syscolor}
                      />
             </div>
 

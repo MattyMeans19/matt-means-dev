@@ -13,7 +13,7 @@ function Window(props){
     const [width] = useState(props.width);
     const [height] = useState(props.height);
     const nodeRef = useRef(null);
-    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} changeSysColor ={updateSysColor} />, "RPS", "Pinball", "Solitaire", "SBB", "SBM", "SBP"];
+    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} />, "RPS", "Pinball", "Solitaire", "SBB", "SBM", "SBP"];
 
     useEffect(() => {
         if(minimized !== props.minimized){
@@ -44,9 +44,6 @@ function Window(props){
         props.bgUpdate(newBG);
     }
 
-    function updateSysColor(newColor){
-        props.updateSysColor(newColor)
-    }
 
     return(         
         <Draggable nodeRef={nodeRef}
@@ -57,7 +54,7 @@ function Window(props){
             
         >
             <div ref={nodeRef} className={[`absolute ${focused ? 'z-20' : 'z-10'}`]}>
-                <div className={[`handler border-10 ${props.borderColor} rounded-t-2xl select-none
+                <div className={[`handler border-10 syscolor syscolor-Border rounded-t-2xl select-none
                     ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} ${width}`]}
                     >
                    <TopBar 
@@ -66,10 +63,9 @@ function Window(props){
                         id= {props.id}
                         onClose={close}
                         onMinimize={MinimizedClicked}
-                        color = {props.color}
                     /> 
                 </div>    
-                <div className={[`border-10 ${props.borderColor} rounded-b-2xl select-none 
+                <div className={[`border-10 syscolor-Border rounded-b-2xl select-none 
                     ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} absolute ${width} ${height} overflow-y-clip`]}
                     onClick={() => (bringToFront())}>  
                     {apps[props.id - 1]}  

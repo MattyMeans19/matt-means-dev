@@ -19,7 +19,7 @@ function TaskBar(props){
     }
 
     return(
-        <div className={[`flex flex-nowrap justify-between fixed bottom-0 h-[5%] w-screen ${props.sysColor} rounded-t-sm`]}>
+        <div className={[`flex flex-nowrap justify-between fixed bottom-0 h-[5%] w-screen syscolor rounded-t-sm`]}>
             <button className={[`bg-white w-[5%] rounded-t-sm hover:opacity-85 ${menuActive ? 'opacity-100' : 'opacity-50'} passion-one-regular text-2xl`]}
             onClick={() =>(menuClicked())}
             >Menu</button>
