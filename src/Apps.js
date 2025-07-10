@@ -59,7 +59,7 @@ export const apps = [
             onDesktop: false      
         },
         {
-            name: "Rock, Paper, Scissors",
+            name: "R🪨, P📄, S✂️",
             icon: GamesIcon,
             minimized: false,
             id: 6, 
