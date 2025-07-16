@@ -115,7 +115,7 @@ function Desktop(props){
                 ))}
             </div>
             
-            <div className="absolute lg:-left-[33%] xl:-left-[28%] z-30">
+            <div className="absolute lg:-left-[33%] xl:-left-[26.5%] z-30">
               {windows.map((app) =>(
                 <Window 
                     key = {app.id}
