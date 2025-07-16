@@ -64,7 +64,7 @@ function Window(props){
         >
             <div ref={nodeRef} className={[`absolute ${focused ? 'z-20' : 'z-10'}`]}>
                 <div className={[`handler border-10 syscolor syscolor-Border rounded-t-2xl select-none
-                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} ${width}`]}
+                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} desktop ${width}`]}
                     >
                    <TopBar 
                         icon= {props.icon}
@@ -75,7 +75,7 @@ function Window(props){
                     /> 
                 </div>    
                 <div className={[`border-10 syscolor-Border rounded-b-2xl select-none 
-                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} absolute ${width} ${height} overflow-y-clip`]}
+                    ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} desktop absolute ${width} ${height} overflow-y-clip`]}
                     onClick={() => (bringToFront())}>  
                     {apps[props.id - 1]}  
                 </div> 
