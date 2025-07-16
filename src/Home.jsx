@@ -24,7 +24,7 @@ function Home(){
                 />
             </div>
             <div className="mobile">
-                <h1 classname="text-3xl" >Mobile View In Progress!</h1>
+                <h1 className="text-3xl" >Mobile View In Progress!</h1>
             </div>          
         </div>
     )
