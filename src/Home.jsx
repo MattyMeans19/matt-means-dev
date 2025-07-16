@@ -22,12 +22,11 @@ function Home(){
                     bgUpdate = {updateBG}
                     fontUpdate = {updateFont}
                 />
-            </div>               
+            </div>
+            <div className="mobile">
+                <h1 classname="text-3xl" >Mobile View In Progress!</h1>
+            </div>          
         </div>
-        <div>
-            <h1 classname="text-3xl" >Mobile View In Progress!</h1>
-        </div>
-        
     )
 }
 
