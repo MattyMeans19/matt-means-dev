@@ -115,7 +115,7 @@ function Desktop(props){
                 ))}
             </div>
             
-            <div className="absolute -left-[33%] z-30">
+            <div className="absolute lg:-left-[33%] xlg:-left-[25%] z-30">
               {windows.map((app) =>(
                 <Window 
                     key = {app.id}
@@ -142,7 +142,7 @@ function Desktop(props){
                      />
             </div>
 
-            <div className="fixed bottom-0 right-[10%] w-[85%] z-50">
+            <div className="fixed bottom-0 xlg:bottom-1 right-[10%] w-[85%] z-50">
                 <div className="flex flex-nowrap gap-1 max-h-[100%]">
                     {windows.map((window, index) =>(
                         <TaskBarItem 
