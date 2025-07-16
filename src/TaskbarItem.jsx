@@ -18,7 +18,7 @@ function TaskBarItem(props){
                 <h2 className=" w-full text-nowrap hover:cursor-default">{props.name}</h2> 
             </div>
 
-            <div className="relative right-0 bottom-2 w-full text-end -translate-y-5">
+            <div className="relative right-0 bottom-2 w-full text-end -translate-y-5 z-50">
                 <button className="px-1 z-20 hover:bg-gray-600 rounded-full" onClick={() => (props.close(props.id))}>x</button>  
             </div>
             
