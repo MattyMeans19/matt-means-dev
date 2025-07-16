@@ -13,8 +13,8 @@ export const apps = [
             icon: CMDIcon,
             minimized: false,
             id: 1, 
-            height: "h-[600px]",
-            width: "w-[600px]",
+            height: "h-[60vh]",
+            width: "w-[40vw]",
             isFocus: true,
             onDesktop: true     
         },
@@ -23,8 +23,8 @@ export const apps = [
             icon: DocIcon,
             minimized: false,
             id: 2, 
-            height: "h-[500px]",
-            width: "w-[800px]",
+            height: "h-[80vh]",
+            width: "w-[75vw]",
             isFocus: false,
             onDesktop: true       
         },
@@ -33,8 +33,8 @@ export const apps = [
             icon: SkillsIcon,
             minimized: false,
             id: 3, 
-            height: "h-[800px]",
-            width: "w-[1000px]",
+            height: "h-[80vh]",
+            width: "w-[75vw]",
             isFocus: false,
             onDesktop: true        
         },
@@ -43,8 +43,8 @@ export const apps = [
             icon: PortfolioIcon,
             minimized: false,
             id: 4, 
-            height: "h-[800px]",
-            width: "w-[1200px]",
+            height: "h-[80vh]",
+            width: "w-[80vw]",
             isFocus: false,
             onDesktop: true        
         },
@@ -53,8 +53,8 @@ export const apps = [
             icon: SettingsIcon,
             minimized: false,
             id: 5, 
-            height: "h-[800px]",
-            width: "w-[1000px]",
+            height: "h-[85vh]",
+            width: "w-[90vw]",
             isFocus: false,
             onDesktop: false      
         },
@@ -63,7 +63,7 @@ export const apps = [
             icon: GamesIcon,
             minimized: false,
             id: 6, 
-            height: "h-[90vh]",
+            height: "h-[85vh]",
             width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
@@ -73,7 +73,7 @@ export const apps = [
             icon: PinballIcon,
             minimized: false,
             id: 7, 
-            height: "h-[90vh]",
+            height: "h-[85vh]",
             width: "w-[100vw]",
             isFocus: false,
             onDesktop: false       
@@ -83,7 +83,7 @@ export const apps = [
             icon: GamesIcon,
             minimized: false,
             id: 8, 
-            height: "h-[90vh]",
+            height: "h-[85vh]",
             width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
@@ -93,7 +93,7 @@ export const apps = [
             icon: MediaIcon,
             minimized: false,
             id: 9, 
-            height: "h-[90vh]",
+            height: "h-[85vh]",
             width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
@@ -103,8 +103,8 @@ export const apps = [
             icon: MediaIcon,
             minimized: false,
             id: 10, 
-            height: "h-[800px]",
-            width: "w-[1000px]",
+            height: "h-[85vh]",
+            width: "w-[100vw]",
             isFocus: false,
             onDesktop: false       
         },
@@ -113,8 +113,8 @@ export const apps = [
             icon: MediaIcon,
             minimized: false,
             id: 11, 
-            height: "h-[800px]",
-            width: "w-[1200px]",
+            height: "h-[85vh]",
+            width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
         }

@@ -95,7 +95,7 @@ function Desktop(props){
 
 
     return(
-        <div className={[`h-screen w-screen self-start overflow-clip absolute z-30 ${props.bg}`]} onClick={() => (shutMenu())}>
+        <div className={[`h-screen w-screen self-start overflow-clip absolute left-0 top-0 z-30 ${props.bg}`]} onClick={() => (shutMenu())}>
 
             <Menu 
                 active = {menuActive}
@@ -115,7 +115,7 @@ function Desktop(props){
                 ))}
             </div>
             
-            <div className="absolute z-30">
+            <div className="absolute -left-[33%] z-30">
               {windows.map((app) =>(
                 <Window 
                     key = {app.id}
@@ -142,7 +142,7 @@ function Desktop(props){
                      />
             </div>
 
-            <div className="fixed bottom-0 right-[10%] h-[4.65%] w-[85%] z-50">
+            <div className="fixed bottom-2 right-[10%] h-[5%] w-[85%] z-50">
                 <div className="flex flex-nowrap gap-1 max-h-[100%]">
                     {windows.map((window, index) =>(
                         <TaskBarItem 

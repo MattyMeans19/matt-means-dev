@@ -17,7 +17,7 @@ function Menu(props){
 
 
     return(
-        <div id="menu" className={[`border-10 syscolor-Border bg-gray-200 rounded-t-4xl w-[15%] absolute z-30 bottom-12 h-[60%] ${props.active ? 'visible animate-fade-up animate-once animate-duration-250 animate-ease-linear' : 'hidden'} flex flex-col gap-10 py-10`]}>
+        <div id="menu" className={[`border-10 syscolor-Border bg-gray-200 rounded-t-2xl w-[15%] absolute z-30 bottom-12 h-[60%] ${props.active ? 'visible animate-fade-up animate-once animate-duration-250 animate-ease-linear' : 'hidden'} flex flex-col gap-10 py-10 overflow-y-scroll`]}>
             <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5" onClick={() => (props.open(5))}>⚙️ Settings</button>
             <div>
                 <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5" onClick={() => (Games())}>🕹️ Games</button>
