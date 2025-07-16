@@ -81,7 +81,7 @@ background-image: url("https://www.transparenttextures.com/patterns/swirl.png"),
   font-style: normal;
 }
 
-  @media only screen and (max-width: 768){
+  @media (max-width: 768){
     .mobile{
       visibility: visible;
     }
@@ -90,7 +90,7 @@ background-image: url("https://www.transparenttextures.com/patterns/swirl.png"),
     }
   }
 
-    @media only screen and (max-width: 5120){
+    @media (max-width: 5120){
     .mobile{
       visibility: hidden;
     }
