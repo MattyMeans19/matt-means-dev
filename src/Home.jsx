@@ -16,7 +16,7 @@ function Home(){
 
     return(
         <div className="max-h-screen max-w-screen">
-            <div className={[`flex flex-wrap max-h-screen text-(--textColor) ${sysFont}`]}>
+            <div className={[`flex flex-wrap max-h-screen text-(--textColor) ${sysFont} desktop`]}>
                 <Desktop 
                     bg = {background}
                     bgUpdate = {updateBG}

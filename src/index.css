@@ -80,3 +80,21 @@ background-image: url("https://www.transparenttextures.com/patterns/swirl.png"),
   font-weight: 400;
   font-style: normal;
 }
+
+  @media only screen and (max-width: 768){
+    .mobile{
+      visibility: visible;
+    }
+    .desktop{
+      visibility: hidden;
+    }
+  }
+
+    @media only screen and (max-width: 5120){
+    .mobile{
+      visibility: hidden;
+    }
+    .desktop{
+      visibility: visible;
+    }
+  }
