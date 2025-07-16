@@ -12,13 +12,13 @@ function TaskBarItem(props){
     }
     
     return(
-        <div className={[`shrink basis-1/6 border-5 border-double border-black px-2 bg-gray-300 rounded-lg pt-2 hover:bg-gray-400 grid grid-cols-3 overflow-x-clip`]}>
-            <div className="col-start-1 col-span-2 relative z-50 w-[90%] flex flex-nowrap gap-5" onClick={() =>(Clicked())}>
+        <div className={[`shrink basis-1/6 border-5 border-double border-black px-2 bg-gray-300 rounded-lg pt-2 hover:bg-gray-400 overflow-x-clip h-10`]}>
+            <div className="relative z-50 w-[90%] flex flex-nowrap gap-5" onClick={() =>(Clicked())}>
                 <img src={props.icon} className="size-5 "/>
                 <h2 className=" w-full text-nowrap hover:cursor-default">{props.name}</h2> 
             </div>
 
-            <div className="col-start-3 col-span-1 relative right-0 bottom-2 w-full text-end -translate-y-2">
+            <div className="relative right-0 bottom-2 w-full text-end -translate-y-5">
                 <button className="px-1 z-20 hover:bg-gray-600 rounded-full" onClick={() => (props.close(props.id))}>x</button>  
             </div>
             

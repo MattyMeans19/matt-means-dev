@@ -142,7 +142,7 @@ function Desktop(props){
                      />
             </div>
 
-            <div className="fixed bottom-2 right-[10%] h-[5%] w-[85%] z-50">
+            <div className="fixed bottom-0 right-[10%] w-[85%] z-50">
                 <div className="flex flex-nowrap gap-1 max-h-[100%]">
                     {windows.map((window, index) =>(
                         <TaskBarItem 
