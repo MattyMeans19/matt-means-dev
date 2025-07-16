@@ -95,7 +95,7 @@ function Desktop(props){
 
 
     return(
-        <div className={[`h-screen w-screen self-start overflow-clip absolute left-0 top-0 z-30 ${props.bg}`]} onClick={() => (shutMenu())}>
+        <div className={[`h-screen w-screen self-start overflow-clip absolute left-0 top-0 z-30 desktop ${props.bg}`]} onClick={() => (shutMenu())}>
 
             <Menu 
                 active = {menuActive}
