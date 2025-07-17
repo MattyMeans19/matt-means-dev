@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Desktop from "./Desktop";
+import MobileView from "./MobileView";
 
 function Home(){
     const [background, updateBackground] = useState("circles")
@@ -24,7 +25,7 @@ function Home(){
                 />
             </div>
             <div className="mobile">
-                <h1 className="text-3xl" >Mobile View In Progress!</h1>
+                <MobileView />
             </div>          
         </div>
     )
