@@ -15,7 +15,7 @@ const mobileApps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings /
 
 function MobileWindow(props){
     return(
-        <div className="absolute inset-y-10 bottom-13 overflow-y-scroll">
+        <div className={[`absolute inset-y-10 bottom-13 overflow-y-scroll ${props.minimized ? "hidden" : "visible"} mobile`]}>
             {mobileApps[props.id-1]}
         </div>
     )

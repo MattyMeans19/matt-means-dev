@@ -7,7 +7,7 @@ import MenuIcon from "/icons8-menu-50.png"
 
 
 function MobileView(){
-    const icons = apps;
+    const [icons, updateIcons] = useState(apps);
     const [time, ChangeTime] = useState();
     const month = new Date().getMonth();
     const day = new Date().getDate();
@@ -33,13 +33,29 @@ function MobileView(){
 
     };
 
-        const homeClicked = () => {
+    const reOpenApp = (id) =>{
         const newWindows = [...windows];
+        const newIcons = [...icons];
+        const openWindows = windows.findIndex( window => window.id === id);
+        const iconIndex = icons.findIndex(icon => icon.id === id);
+
+        newWindows[openWindows] = { ...newWindows[openWindows], minimized: false};
+        updateWindows(newWindows);
+        newIcons[iconIndex] = {...newIcons[iconIndex], minimized: false};
+        updateIcons(newIcons);
+
+    }
+
+    const homeClicked = () => {
+        const newWindows = [...windows];
+        const newIcons = [...icons];
 
             for(let i = 0; i < newWindows.length; i++){
-                console.log(i)
                 newWindows[i] = { ...newWindows[i], minimized: true };
                 updateWindows(newWindows);
+                let iconIndex = newWindows[i].id - 1;
+                newIcons[iconIndex] = {...newIcons[iconIndex], minimized: true};
+                updateIcons(newIcons);
                 }
 
     }; 
@@ -53,21 +69,24 @@ function MobileView(){
             </div>
             
             <div className="grow grid grid-cols-4 p-1 gap-15 mt-10">
-                {icons.map((icon) =>
+                {icons.map((icon, index) =>
                 <MobileIcons 
-                    key= {icon.id}
+                    key= {index}
                     name= {icon.name}
                     icon= {icon.icon}
                     id= {icon.id}
-                    openApp ={openApp}
+                    minimized= {icon.minimized}
+                    openApp= {openApp}
+                    reOpen= {reOpenApp}
                 />
                 )}
             </div>
 
-            {windows.map((app) =>
+            {windows.map((app, index) =>
                 <MobileWindow 
-                    key= {app.id}
+                    key= {index}
                     id= {app.id}
+                    minimized = {app.minimized}
                 />
             )}
 
