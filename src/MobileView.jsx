@@ -2,13 +2,15 @@ import React, {useState, useEffect} from "react";
 import { apps } from "./Apps";
 import MobileIcons from "./MobileIcons";
 import MobileWindow from "./MobileWindow";
+import DrawerIcon from "./DrawerIcon";
 import HomeIcon from "/icons8-circle-48.png"
 import MenuIcon from "/icons8-menu-50.png"
 
 
-function MobileView(){
+function MobileView(props){
     const [icons, updateIcons] = useState(apps);
     const [time, ChangeTime] = useState();
+    const [drawerOpen, toggleDrawer] = useState(false)
     const month = new Date().getMonth();
     const day = new Date().getDate();
     const year = new Date().getFullYear();
@@ -44,7 +46,27 @@ function MobileView(){
         newIcons[iconIndex] = {...newIcons[iconIndex], minimized: false};
         updateIcons(newIcons);
 
+        if(drawerOpen === true){
+            menuClicked()
+        }
     }
+
+    const closeApp = (id) => {
+        const newWindows = [...windows]
+        const newIcons = [...icons];
+        const windowIndex = newWindows.findIndex(window => window.id === id);
+        const iconIndex = icons.findIndex(icon => icon.id === id);
+
+        if (windowIndex > -1){
+            newWindows[windowIndex] = { ...newWindows[windowIndex], minimized: false};
+            updateWindows(newWindows);
+            newIcons[iconIndex] = {...newIcons[iconIndex], minimized: false};
+            updateIcons(newIcons);
+            newWindows.splice(windowIndex, 1);
+            updateWindows(newWindows);
+        }
+
+    };
 
     const homeClicked = () => {
         const newWindows = [...windows];
@@ -58,11 +80,26 @@ function MobileView(){
                 updateIcons(newIcons);
                 }
 
-    }; 
+            if(drawerOpen === true){
+                menuClicked();
+            }
+
+    };
+
+    function menuClicked(){
+        toggleDrawer(!drawerOpen);
+    }
+
+    function updateBG(newBG){
+        props.bgUpdate(newBG);
+    }
+    function updateFont(newFont){
+        props.fontUpdate(newFont)
+    }
 
 
     return(
-        <div className="w-screen h-screen flex flex-col">
+        <div className={[`w-screen h-screen flex flex-col ${props.bg}`]}>
             <div className="w-[100vw] p-1 syscolor flex flex-nowrap justify-between">
                 <span className="bg-gray-200/25 px-1 rounded-full">{month}/{day}/{year}</span>
                 <span className="bg-gray-200/25 px-1 rounded-full">{time}</span>
@@ -87,11 +124,26 @@ function MobileView(){
                     key= {index}
                     id= {app.id}
                     minimized = {app.minimized}
+                    bgUpdate = {updateBG}
+                    fontUpdate = {updateFont}
                 />
             )}
 
+            <div className={[`${drawerOpen ? "visible" : "hidden"} bg-black/75 absolute inset-y-10 -translate-y-2 w-full flex flex-col gap-3 px-2 pt-2`]}>
+                {windows.map((app, index) =>(
+                    <DrawerIcon 
+                        key= {index}
+                        id= {app.id}
+                        icon= {app.icon}
+                        name= {app.name}
+                        close= {closeApp}
+                        open= {reOpenApp}
+                    />
+                ))}
+            </div>
+
             <div className="flex flex-nowrap justify-around bg-gray-300/30">
-                <button className="active:bg-gray-300 px=1">
+                <button className="active:bg-gray-300 px=1" onClick={() => (menuClicked())}>
                     <img src={MenuIcon}></img>
                 </button>
                 <button className="active:bg-gray-300 px=1" onClick={() => (homeClicked())}>

@@ -11,12 +11,18 @@ import SBB from "./SBB";
 import SBM from "./SBM";
 import SBP from "./SBP";
 
-const mobileApps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings />, <RPS />, <Pinball />, <Solitaire />, <SBB />, <SBM />, <SBP />];
-
 function MobileWindow(props){
+    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} fontUpdate = {updateFont} />, <RPS />, <Pinball />, <Solitaire />, <SBB />, <SBM />, <SBP />];
+
+    function updateBG(newBG){
+        props.bgUpdate(newBG);
+    }
+    function updateFont(newFont){
+        props.fontUpdate(newFont)
+    }
     return(
         <div className={[`absolute inset-y-10 bottom-13 overflow-y-scroll ${props.minimized ? "hidden" : "visible"} mobile`]}>
-            {mobileApps[props.id-1]}
+            {apps[props.id-1]}
         </div>
     )
 }
