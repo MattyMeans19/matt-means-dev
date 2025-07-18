@@ -24,7 +24,7 @@ function Home(){
                     fontUpdate = {updateFont}
                 />
             </div>
-            <div className={[`text-(--textColor) ${sysFont} mobile`]}>
+            <div className={[`text-(--textColor) ${sysFont} mobile w-screen h-screen`]}>
                 <MobileView 
                     bg = {background}
                     bgUpdate = {updateBG}

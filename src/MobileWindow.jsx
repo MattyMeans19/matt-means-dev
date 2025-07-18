@@ -21,7 +21,7 @@ function MobileWindow(props){
         props.fontUpdate(newFont)
     }
     return(
-        <div className={[`absolute inset-y-10 bottom-13 overflow-y-scroll ${props.minimized ? "hidden" : "visible"} mobile`]}>
+        <div className={[`absolute size-full ${props.minimized ? "hidden z-10" : "visible z-45"} mobile`]}>
             {apps[props.id-1]}
         </div>
     )

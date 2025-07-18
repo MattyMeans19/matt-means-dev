@@ -35,7 +35,7 @@ function Settings(props){
     }
 
     return(
-        <div className="size-full border-2 border-black bg-white">
+        <div className="size-full border-2 border-black bg-white overflow-y-scroll">
             <div className="flex flex-nowrap justify-around px-10 pb-1 gap-10 h-[10%] place-items-end border-b-10 border-solid border-black rounded-2xl ">
                 <button className="text-center basis-full bg-gray-200 hover:bg-gray-400 active:bg-gray-600 rounded-full" onClick={() => (newView(1))}>Background</button>
                 <button className="text-center basis-full bg-gray-200 hover:bg-gray-400 active:bg-gray-600 rounded-full" onClick={() => (newView(2))}>Color</button>
