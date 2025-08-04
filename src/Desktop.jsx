@@ -23,7 +23,7 @@ function Desktop(props){
             updateWindows(newWindows);
         }
 
-        if(id > 4){
+        if(id > 4 && id != 12){
             menuView();
         }
 
@@ -102,7 +102,7 @@ function Desktop(props){
                 open = {openApp}
             />
 
-            <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 max-h-screen">
+            <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 mb-[10%] max-h-screen">
                 {apps.map((app, index) =>(
                     <Icon 
                         key = {index}

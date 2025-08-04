@@ -6,6 +6,7 @@ import SettingsIcon from "/icons8-settings-48.png";
 import MediaIcon from "/icons8-media-player-64.png";
 import GamesIcon from "/icons8-games-100.png";
 import PinballIcon from "/icons8-pinball-64.png";
+import EmailIcon from "/icons8-email-48.png";
 
 export const apps = [
         {
@@ -117,5 +118,15 @@ export const apps = [
             width: "w-[100vw]",
             isFocus: false,
             onDesktop: false        
+        },
+        {
+            name: "Email",
+            icon: EmailIcon,
+            minimized: false,
+            id: 12, 
+            height: "h-[85vh]",
+            width: "w-[50vw]",
+            isFocus: false,
+            onDesktop: true        
         }
     ]
