@@ -23,7 +23,7 @@ function Portfolio(){
                 <h1 className="text-center text-5xl underline">{sites[currentView].name}</h1>
                 <a href={sites[currentView].url} target="_blank" className="text-center text-2xl">{sites[currentView].url}</a>
                 <img src={sites[currentView].image} className="size-full md:size-[70%] place-self-center border-10 border-double"/>
-                <span className="text-center text-3xl">{sites[currentView].description}</span>
+                <span className="text-center text-2xl">{sites[currentView].description}</span>
             </div>
             <button className="size-10 active:bg-blue-600" onClick={() => (nextView())}>▶️</button>
         </div>
