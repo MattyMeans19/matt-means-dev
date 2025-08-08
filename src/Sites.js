@@ -6,7 +6,7 @@ export const sites = [
         name: "All Keyboard Shortcuts",
         url: "https://allkeyboardshortcuts.info",
         image: AKSImage,
-        description: "A simple webiste that contains lists of keyboard shortcuts for various Operating Systems and Applications!"
+        description: "A simple webiste that contains lists of keyboard shortcuts for various Operating Systems and Applications!\nIt was built using React and TailwindCSS, you can check out all the code at my Github Repo: https://github.com/MattyMeans19/all-keyboard-shortcuts"
     },
     {
         id: 2, 
