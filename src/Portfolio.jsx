@@ -19,7 +19,7 @@ function Portfolio(){
     return(
         <div className="border-3 border-gray-400 bg-gray-900 size-[100%] flex flex-nowrap justify-between place-items-center md:p-5">
             <button className="size-10 active:bg-blue-600" onClick={() => (prevView())}>◀️</button>
-            <div className="basis-full h-full border-5 border-double border-black rounded-4xl flex flex-col gap-5 p-10 bg-cyan-500">
+            <div className="basis-full h-full border-5 border-double border-black rounded-4xl flex flex-col gap-5 p-10 bg-cyan-500 overflow-y-scroll">
                 <h1 className="text-center text-5xl underline">{sites[currentView].name}</h1>
                 <a href={sites[currentView].url} target="_blank" className="text-center text-2xl">{sites[currentView].url}</a>
                 <img src={sites[currentView].image} className="size-full md:size-[70%] place-self-center border-10 border-double"/>
