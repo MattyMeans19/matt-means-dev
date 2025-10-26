@@ -13,7 +13,7 @@ function Desktop(props){
 
     const [menuActive, changeMenuActive] = useState(false);
 
-    const openApp = (id) => {
+    const openApp = (id, onDesktop) => {
         let index = id - 1;
         const newWindows = [...windows];
         const openWindows = windows.filter( window => window.id === id);
@@ -23,7 +23,7 @@ function Desktop(props){
             updateWindows(newWindows);
         }
 
-        if(id > 4 && id != 12){
+        if(!onDesktop){
             menuView();
         }
 

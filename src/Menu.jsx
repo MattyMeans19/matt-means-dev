@@ -23,18 +23,18 @@ function Menu(props){
                 <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5" onClick={() => (Games())}>🕹️ Games</button>
                 <ul className={[`pl-5 text-[1rem] ${gamesView ? 'visible' : 'hidden'} p-1`]}>
                     <span className="cursor-default">🔻</span>
-                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(6))}><img src={GamesIcon} className="size-5"></img>Rock, Paper, Scissors</li>
-                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(7))}><img src={PinballIcon} className="size-5"></img>Pinball</li>
-                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(8))}><img src={GamesIcon} className="size-5"></img>Solitaire</li>
+                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(6, false))}><img src={GamesIcon} className="size-5"></img>Rock, Paper, Scissors</li>
+                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(7, false))}><img src={PinballIcon} className="size-5"></img>Pinball</li>
+                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(8, false))}><img src={GamesIcon} className="size-5"></img>Solitaire</li>
                 </ul>
             </div>
             <div>
                <button className="w-full text-start text-2xl active:bg-gray-400 rounded-full p-5" onClick={() => (Templates())}>📁 Templates</button>
                <ul className={[`pl-5 text-[1rem] ${templatesView ? 'visible' : 'hidden'} p-1`]}>
                     <span className="cursor-default">🔻</span>
-                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(9))}><img src={MediaIcon} className="size-5"></img>Small-Business-Basic</li>
-                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(10))}><img src={MediaIcon} className="size-5"></img>Small-Business-Mid</li>
-                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(11))}><img src={MediaIcon} className="size-5"></img>Small-Business-Premium</li>
+                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(9, false))}><img src={MediaIcon} className="size-5"></img>Small-Business-Basic</li>
+                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(10, false))}><img src={MediaIcon} className="size-5"></img>Small-Business-Mid</li>
+                    <li className="flex flex-nowrap gap-2 cursor-default hover:bg-gray-300 active:bg-gray-500 rounded-full" onClick={() => (props.open(11, false))}><img src={MediaIcon} className="size-5"></img>Small-Business-Premium</li>
                 </ul>
             </div>
             

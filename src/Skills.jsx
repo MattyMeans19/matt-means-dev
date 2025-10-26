@@ -2,8 +2,8 @@ import React from "react";
 
 function Skills(){
     return(
-        <div>
-            <div className="bg-emerald-300 size-full grid grid-cols-8 gap-15 p-5 passion-one-regular overflow-y-scroll desktop">
+        <div className="size-[100%] bg-emerald-300 overflow-y-scroll">
+            <div className="grid grid-cols-8 gap-15 p-5 passion-one-regular desktop">
                 <div className="col-start-1 col-span-4 bg-amber-100 border-3 border-black p-2 rounded-2xl">
                     <h1 className="text-4xl text-center underline mb-5">Front End</h1>
                     <p className="text-2xl p-5 border-5 border-double mb-15">From stylizing things like fonts and colors, to making basic functionality like a button click. This webpage is purely front end, and a great example of what I can do!</p>

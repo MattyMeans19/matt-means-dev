@@ -7,6 +7,7 @@ import MediaIcon from "/icons8-media-player-64.png";
 import GamesIcon from "/icons8-games-100.png";
 import PinballIcon from "/icons8-pinball-64.png";
 import EmailIcon from "/icons8-email-48.png";
+import CertIcon from "/icons8-certificate-96.png";
 
 export const apps = [
         {
@@ -128,5 +129,15 @@ export const apps = [
             width: "w-[50vw]",
             isFocus: false,
             onDesktop: true        
+        },
+        {
+            name: "Certificates",
+            icon: CertIcon,
+            minimized: false,
+            id: 13, 
+            height: "h-[80vh]",
+            width: "w-[75vw]",
+            isFocus: false,
+            onDesktop: true       
         }
     ]
