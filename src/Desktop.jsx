@@ -102,7 +102,7 @@ function Desktop(props){
                 open = {openApp}
             />
 
-            <div className="absolute left-5 basis-1/3 flex flex-col place-items-start gap-5 mb-[10%] max-h-screen">
+            <div className="absolute left-1 basis-1/3 grid grid-cols-2 place-items-start gap-5 my-10 max-h-screen">
                 {apps.map((app, index) =>(
                     <Icon 
                         key = {index}
@@ -115,7 +115,7 @@ function Desktop(props){
                 ))}
             </div>
             
-            <div className="absolute lg:-left-[33%] 2xl:-left-[26%] z-30">
+            <div className="z-30">
               {windows.map((app) =>(
                 <Window 
                     key = {app.id}

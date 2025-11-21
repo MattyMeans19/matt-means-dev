@@ -61,10 +61,10 @@ function Window(props){
             allowAnyClick="false"
             handle=".handler"
             axis="both"
-            defaultPosition={{x: 500, y: 0, z: 10}}
+            defaultPosition={{x: 0, y: 0, z: 10}}
             
         >
-            <div ref={nodeRef} className={[`absolute ${focused ? 'z-20' : 'z-10'}`]}>
+            <div ref={nodeRef} className={[`${focused ? 'z-20' : 'z-10'}`]}>
                 <div className={[`handler border-10 syscolor syscolor-Border rounded-t-2xl select-none
                     ${minimized ? 'hidden ' : 'animate-fade-up animate-once animate-duration-100 animate-ease-in animate-normal visible'} desktop ${width}`]}
                     >
