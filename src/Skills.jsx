@@ -9,8 +9,8 @@ function Skills(){
                     <p className="text-2xl p-5 border-5 border-double mb-15">From stylizing things like fonts and colors, to making basic functionality like a button click. This webpage is purely front end, and a great example of what I can do!</p>
                     <ul className="ml-5 list-disc text-2xl">
                         <li>Experienced with custom CSS and CSS frameworks (This page uses TailwindCSS)</li>
-                        <li>Proficient in web based langauges like HTML and JavaScript</li>
-                        <li>Experienced with JavaScript Frameworks like Node, Express, jQuery, and React(this webpage uses React!)</li>
+                        <li>Proficient in web based langauges like HTML, JavaScript, and TypeScript</li>
+                        <li>Experienced with JavaScript Frameworks like Node, Express, jQuery, React(this webpage uses React!), and Next.js</li>
                         <li>Knowledge of Next.js in regards to front-end applications.</li>
                     </ul>
                 </div>
