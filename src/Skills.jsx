@@ -11,6 +11,7 @@ function Skills(){
                         <li>Experienced with custom CSS and CSS frameworks (This page uses TailwindCSS)</li>
                         <li>Proficient in web based langauges like HTML and JavaScript</li>
                         <li>Experienced with JavaScript Frameworks like Node, Express, jQuery, and React(this webpage uses React!)</li>
+                        <li>Knowledge of Next.js in regards to front-end applications.</li>
                     </ul>
                 </div>
                 <div className="col-start-5 col-span-4 bg-amber-100 border-3 border-black p-2 rounded-2xl">
@@ -20,6 +21,7 @@ function Skills(){
                         <li>Proficient with SQL database language</li>
                         <li>Can build custom APIs or leverage exisiting ones</li>
                         <li>Can provide built-in security using modern hashing techniques.</li>
+                        <li>Knowledge of Next.js in regards to back-end applications.</li>
                     </ul>                
                 </div>
 
@@ -30,6 +32,8 @@ function Skills(){
                         <li>Advanced communications, verbal and written.</li>
                         <li>Punctual and task oriented.</li>
                         <li>Advanced critical thinking skills and highly able to think 'outside of the box'.</li>
+                        <li>Proficient with Typescript.</li>
+                        <li>Proficient with version control using Git.</li>
                     </ul>                
                 </div>
             </div>
