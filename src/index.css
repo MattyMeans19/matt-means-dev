@@ -86,13 +86,13 @@ background-image: url("https://www.transparenttextures.com/patterns/swirl.png"),
       visibility: visible;
     }
     .desktop{
-      visibility: hidden;
+      display: none;
     }
   }
 
     @media screen and (width > 1080px){
     .mobile{
-      visibility: hidden;
+      display: none;
     }
     .desktop{
       visibility: visible;
