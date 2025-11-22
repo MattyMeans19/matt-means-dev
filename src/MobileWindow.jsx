@@ -11,9 +11,10 @@ import SBB from "./SBB";
 import SBM from "./SBM";
 import SBP from "./SBP";
 import { Contact } from "./Email";
+import Certs from "./Certs";
 
 function MobileWindow(props){
-    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} fontUpdate = {updateFont} />, <RPS />, <Pinball />, <Solitaire />, <SBB />, <SBM />, <SBP />, <Contact />];
+    const apps = [<Welcome/>, <About/>, <Skills />, <Portfolio />, <Settings bgUpdate = {updateBG} fontUpdate = {updateFont} />, <RPS />, <Pinball />, <Solitaire />, <SBB />, <SBM />, <SBP />, <Contact />,<Certs />];
 
     function updateBG(newBG){
         props.bgUpdate(newBG);
