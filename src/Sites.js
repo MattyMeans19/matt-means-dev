@@ -1,6 +1,7 @@
 import AKSImage from "/allkeyboardshortcuts.png";
 import SBTImage from "/SBtemplate.png";
 import PMAImage from "/PMA.png";
+import LQImage from "/LyriQuery.png";
 
 export const sites = [
     {
@@ -15,7 +16,7 @@ export const sites = [
         name: "Small Business Template",
         url: "https://smallbusiness-p-e6a955b1be25.herokuapp.com/",
         image: SBTImage,
-        description: "This site is a template for a Small Business web page. It's intended to provide a live inventory and cart reservations for customers, while also providing information on the business. It was built using React + Vite and TailwindCSS for the font end, and Express.js for the backend using a custom API for a PostgreSQL database I built. If you add '/business-portal' to the base URL it will take you to a business-side dashboard for inventory and user management and you can login using 'Admin' for the username and password. You can check out all the code at my Github Repo: https://github.com/MattyMeans19/small-business-premium.git"
+        description: "This site is a template for a Small Business web page. It's intended to provide a live inventory and cart reservations for customers, while also providing information on the business. It was built using React + Vite and TailwindCSS for the front-end, and Express.js for the back-end using a custom API for a PostgreSQL database I built. If you add 'business-portal' to the base URL after the '/' it will take you to a business-side dashboard for inventory and user management and you can login using 'Admin' for the username and password. You can check out all the code at my Github Repo: https://github.com/MattyMeans19/small-business-premium.git"
     },
     {
         id: 3, 
@@ -23,5 +24,12 @@ export const sites = [
         url: "https://post-most-anything-45028429ddb1.herokuapp.com/",
         image: PMAImage,
         description: "This is a simple blog site that I built using Next.js and TypeScript. It uses hashing and salting for password encyrption, and creates session data that will last for a week. It uses a PostgreSQL database for storing data, and was designed with TailwindCSS. Check out the GitHub Repo here: https://github.com/MattyMeans19/post-most-anything.git"
+    },
+    {
+        id: 4,
+        name: "LyriQuery",
+        url: "https://lyriquery-3b245fcbd6b4.herokuapp.com/",
+        image: LQImage,
+        description: "Search up any Lyrics using the LRCLIB public API. This site was built using Express.js back-end and EJS front-end. The styling is basic CSS, no frameworks used. Check out the code at my Github Repo: https://github.com/MattyMeans19/LyriQuery.git"
     }
 ]
