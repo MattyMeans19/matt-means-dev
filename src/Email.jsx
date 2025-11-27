@@ -33,21 +33,21 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex items-center justify-center p-5 size-full bg-white absolute top-0"
+      className="p-5"
     >
         <div className="px-4 w-full p-6">
-          <h2 className="text-3xl mb-8 border-10 rounded-3xl border-double syscolor-Border text-center">
+          <h2 className="lg:text-3xl mb-8 border-10 rounded-3xl border-double bg-white text-center">
             Feel free to reach out for any inquiries or questions about my services!
           </h2>
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="relative">
+          <form className="flex flex-col h-fit justify-center gap-5" onSubmit={handleSubmit}>
+            <div >
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
                 value={formData.name}
-                className="w-full border-3 syscolor-Border"
+                className="w-full border-3 bg-white"
                 placeholder="Name..."
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -55,14 +55,14 @@ export const Contact = () => {
               />
             </div>
 
-            <div className="relative">
+            <div >
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
                 value={formData.email}
-                className="w-full border-3 syscolor-Border"
+                className="w-full border-3 bg-white"
                 placeholder="example@gmail.com"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -70,14 +70,14 @@ export const Contact = () => {
               />
             </div>
 
-            <div className="relative">
+            <div >
               <textarea
                 id="message"
                 name="message"
                 required
                 rows={5}
                 value={formData.message}
-                className="w-full border-3 syscolor-Border place-self-center"
+                className="w-full border-3 bg-white place-self-center"
                 placeholder="Your Message..."
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -87,7 +87,7 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="border-5 w-full syscolor"
+              className="border-5 w-[50%] self-center bg-emerald-700 rounded-full"
             >
               Send Message
             </button>

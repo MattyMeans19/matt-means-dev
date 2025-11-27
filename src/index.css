@@ -2,99 +2,62 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-:root{
-  --sysColor: #008236;
-  --textColor: #0A0A0A;
+.quantico-regular {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body{
-background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
+@apply bg-gray-600;
+font-family: "Quantico", sans-serif;
+background-image: url("https://www.transparenttextures.com/patterns/office.png");}
+
+.fadeRight{
+  @apply animate-fade-right animate-once animate-duration-1000;
+}
+.fadeRightDelayed{
+  @apply animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in;
 }
 
-.circles{
-  background-image: url("https://www.transparenttextures.com/patterns/swirl.png"), linear-gradient(90deg,rgba(184, 145, 6, 1) 0%, rgba(2, 163, 15, 1) 49%, rgba(184, 4, 212, 1) 100%);
-}
-.sunset{
-  background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png"), linear-gradient(0deg,rgba(237, 166, 74, 1) 0%, rgba(2, 144, 163, 1) 49%, rgba(212, 118, 227, 1) 100%);
-}
-.flowers{
-  background-image: url("https://www.transparenttextures.com/patterns/flowers.png"), linear-gradient(90deg,rgba(42, 155, 153, 1) 0%, rgba(178, 199, 87, 1) 50%, rgba(222, 83, 237, 1) 100%);
-}
-.sunburst{
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), radial-gradient(circle,rgba(199, 113, 0, 1) 0%, rgba(122, 112, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
-}
-.parallelograms{
-  background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png"), linear-gradient(31deg,rgba(255, 0, 0, 1) 0%, rgba(0, 176, 0, 1) 50%, rgba(0, 0, 255, 1) 100%);
-}
-.neon{
-  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png"), linear-gradient(60deg,rgba(0, 238, 255, 1) 0%, rgba(255, 0, 212, 1) 50%, rgba(255, 247, 0, 1) 100%);
+.fadeLeft{
+  @apply animate-fade-left animate-once animate-duration-1000 animate-delay-500 animate-ease-in;
 }
 
-.syscolor{
-  background-color: var(--sysColor);
-}
-.syscolor-Border{
-  border-color: var(--sysColor);
-}
-.textcolor{
-  color: var(--textColor);
+.fadeDown{
+  @apply animate-fade-down animate-once animate-duration-[1500ms] animate-ease-in;
 }
 
-.pattern{
-  background-color: #074215;
-  background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+.flipDown{
+  @apply animate-flip-down animate-once animate-duration-[1000ms] animate-delay-1500 animate-ease-in;
 }
 
-.passion-one-regular {
-  font-family: "Passion One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.flipUp{
+  @apply animate-flip-up animate-once animate-duration-1000 animate-ease-linear animate-normal;
 }
 
-.jersey-10-regular {
-  font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.popIn{
+  @apply animate-jump-in animate-once animate-duration-[1000ms] animate-ease-in;
 }
 
-.poiret-one-regular {
-  font-family: "Poiret One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.carouselNext{
+  @apply animate-fade-right animate-once animate-duration-500 animate-ease-linear animate-reverse;
 }
 
-.barriecito-regular {
-  font-family: "Barriecito", system-ui;
-  font-weight: 400;
-  font-style: normal;
+.carouselPrev{
+  @apply animate-fade-left animate-once animate-duration-500 animate-ease-linear animate-reverse;
 }
 
-.italianno-regular {
-  font-family: "Italianno", cursive;
-  font-weight: 400;
-  font-style: normal;
+.tabSelection{
+  @apply cursor-pointer text-gray-400;
 }
 
-.audiowide-regular {
-  font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.skillList{
+  @apply lg:text-2xl p-5 space-y-2;
 }
-
-  @media screen and (width <= 1080px){
-    .mobile{
-      visibility: visible;
-    }
-    .desktop{
-      display: none;
-    }
-  }
-
-    @media screen and (width > 1080px){
-    .mobile{
-      display: none;
-    }
-    .desktop{
-      visibility: visible;
-    }
-  }
+.skillTitle{
+  @apply text-center text-gray-300 underline rounded-t-2xl bg-emerald-600;
+}
+.skillItem{
+  @apply bg-gray-400 p-2 rounded-3xl;
+}
