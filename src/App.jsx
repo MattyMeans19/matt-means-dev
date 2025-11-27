@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router';
 import { Observer } from 'tailwindcss-intersect';
 import Navbar from './Navbar';
 import AboutMe from './AboutMe';
