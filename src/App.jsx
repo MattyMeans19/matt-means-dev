@@ -23,7 +23,7 @@ function App() {
   }
 
   return(
-    <div className='flex flex-col gap-5 h-[100vh]'>
+    <div className='flex flex-col gap-5 h-screen w-screen'>
       <Navbar ChangeTab={changeTab}/>
       {currentTab}
     </div>

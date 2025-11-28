@@ -16,7 +16,7 @@ export const sites = [
         name: "Small Business Template",
         url: "https://smallbusiness-p-e6a955b1be25.herokuapp.com/",
         image: SBTImage,
-        description: "This site is a template for a Small Business web page. It's intended to provide a live inventory and cart reservations for customers, while also providing information on the business. It was built using React + Vite and TailwindCSS for the front-end, and Express.js for the back-end using Postgres for the database. Add 'business-portal' to the base URL after the '/' it will take you to a business-side dashboard for inventory and user management and you can login using 'Admin' for the username and password. You can check out all the code at my Github Repo: https://github.com/MattyMeans19/small-business-premium.git"
+        description: "This is a small business template website featuring live inventory and cart reservations. It was built with React + Vite and TailwindCSS for the front-end, and Express.js with Postgres for the back-end. A business-side dashboard for inventory and user management is accessible at the path /business-portal. Log in using the username 'Admin' and password 'Admin'."
     },
     {
         id: 3, 

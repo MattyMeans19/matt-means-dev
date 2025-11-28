@@ -14,38 +14,30 @@ font-family: "Quantico", sans-serif;
 background-image: url("https://www.transparenttextures.com/patterns/office.png");}
 
 .fadeRight{
-  @apply animate-fade-right animate-once animate-duration-1000;
+  @apply animate-fade-right animate-once animate-duration-500;
 }
 .fadeRightDelayed{
-  @apply animate-fade-right animate-once animate-duration-1000 animate-delay-500 animate-ease-in;
+  @apply animate-fade-right animate-once animate-duration-500 animate-delay-250 animate-ease-in;
 }
 
 .fadeLeft{
-  @apply animate-fade-left animate-once animate-duration-1000 animate-delay-500 animate-ease-in;
+  @apply animate-fade-left animate-once animate-duration-500 animate-delay-250 animate-ease-in;
 }
 
 .fadeDown{
-  @apply animate-fade-down animate-once animate-duration-[1500ms] animate-ease-in;
+  @apply animate-fade-down animate-once animate-duration-750 animate-ease-in;
 }
 
 .flipDown{
-  @apply animate-flip-down animate-once animate-duration-[1000ms] animate-delay-1500 animate-ease-in;
+  @apply animate-flip-down animate-once animate-duration-500 animate-delay-250 animate-ease-in;
 }
 
 .flipUp{
-  @apply animate-flip-up animate-once animate-duration-1000 animate-ease-linear animate-normal;
+  @apply animate-flip-up animate-once animate-duration-500 animate-ease-linear animate-normal;
 }
 
 .popIn{
-  @apply animate-jump-in animate-once animate-duration-[1000ms] animate-ease-in;
-}
-
-.carouselNext{
-  @apply animate-fade-right animate-once animate-duration-500 animate-ease-linear animate-reverse;
-}
-
-.carouselPrev{
-  @apply animate-fade-left animate-once animate-duration-500 animate-ease-linear animate-reverse;
+  @apply animate-jump-in animate-once animate-duration-500 animate-ease-in;
 }
 
 .tabSelection{
@@ -53,11 +45,15 @@ background-image: url("https://www.transparenttextures.com/patterns/office.png")
 }
 
 .skillList{
-  @apply lg:text-2xl p-5 space-y-2;
+  @apply md:text-2xl lg:text-5xl p-5 space-y-2 lg:space-y-10;
 }
 .skillTitle{
   @apply text-center text-gray-300 underline rounded-t-2xl bg-emerald-600;
 }
 .skillItem{
   @apply bg-gray-400 p-2 rounded-3xl;
+}
+
+.slideButton{
+  @apply border-2 bg-gray-600/45 rounded-full p-2 text-3xl;
 }
