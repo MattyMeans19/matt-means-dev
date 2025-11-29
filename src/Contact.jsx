@@ -2,7 +2,7 @@ import { Contact } from "./Email";
 
 export default function ContactMe(){
     return(
-        <div className="popIn w-screen lg:w-[70vw] h-[80vh] lg:h-fit lg:mt-[30vh] place-self-center lg:place-content-center border-10 border-double rounded-2xl bg-gray-400">
+        <div className="h-full">
             <Contact />
         </div>
     )

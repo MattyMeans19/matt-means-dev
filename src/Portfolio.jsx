@@ -23,10 +23,10 @@ export default function Portfolio(){
     };
 
     return(
-        <div className="relative flipUp h-screen flex justify-center items-start lg:items-center">
-            <button className="slideButton absolute left-0 bottom-0 lg:top-100 lg:h-100" onClick={() => {PrevSlide()}}>◀</button>
-            <button className="slideButton absolute right-0 bottom-0 lg:top-100  lg:h-100" onClick={() => {NextSlide()}}>▶</button>
-            <div className="w-[90vw] h-[85vh] overflow-hidden">
+        <div className="h-full w-full relative">
+            <button className="slideButton absolute -left-5 md:-left-10 bottom-100 2xl:bottom-100 2xl:h-100" onClick={() => {PrevSlide()}}>◀</button>
+            <button className="slideButton absolute -right-5 md:-right-10 bottom-100 2xl:bottom-100 2xl:h-100" onClick={() => {NextSlide()}}>▶</button>
+            <div className="w-[90vw] h-full overflow-hidden">
                 <div className="flex flex-row h-full transition-transform duration-500 ease-in-out"
                 style={{transform: translationValue }}>
                     {sites.map((site) =>(

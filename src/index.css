@@ -2,58 +2,83 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-.quantico-regular {
-  font-family: "Quantico", sans-serif;
+.handjet-neon {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
+}
+
+.audiowide {
+  font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-body{
-@apply bg-gray-600;
-font-family: "Quantico", sans-serif;
-background-image: url("https://www.transparenttextures.com/patterns/office.png");}
-
-.fadeRight{
-  @apply animate-fade-right animate-once animate-duration-500;
-}
-.fadeRightDelayed{
-  @apply animate-fade-right animate-once animate-duration-500 animate-delay-250 animate-ease-in;
+body {
+  background: linear-gradient(600deg,#000000,#45556c,#000000);
+  background-size: 600% 600%;
+  animation: gradient-animation 18s ease infinite;
 }
 
-.fadeLeft{
-  @apply animate-fade-left animate-once animate-duration-500 animate-delay-250 animate-ease-in;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.fadeDown{
-  @apply animate-fade-down animate-once animate-duration-750 animate-ease-in;
+.text-outline-Title {
+  -webkit-text-stroke-width: 2px; /* Outline width */
+  -webkit-text-stroke-color: #e0f760c0; /* Outline color */
+}
+.text-outline-Content {
+  -webkit-text-stroke-width: 2px; /* Outline width */
+  -webkit-text-stroke-color: #252524; /* Outline color */
 }
 
-.flipDown{
-  @apply animate-flip-down animate-once animate-duration-500 animate-delay-250 animate-ease-in;
+.metal-bg{
+  @apply bg-linear-to-b from-slate-600 via-gray-400 to-gray-500;
+}
+.screen-bg{
+  @apply bg-linear-to-r from-[#04ff041a] via-[#65f36513] to-[#04ff041a];
 }
 
-.flipUp{
-  @apply animate-flip-up animate-once animate-duration-500 animate-ease-linear animate-normal;
+.navButton{
+  @apply bg-linear-to-t from-slate-300 via-gray-200 to-zinc-300 2xl:text-3xl p-2 md:tracking-widest border-3 
+  border-y-slate-800 border-double rounded-2xl shadow-[inset_0_5px_15px_rgba(50,50,50)];
+}
+.navSelected{
+  @apply text-green-700 text-shadow-lg text-shadow-green-400;
+}
+.navDeselected{
+  @apply text-red-700 text-shadow-lg text-shadow-red-400;
+}
+.navPath{
+  @apply w-[1vw] h-[10vh] border-2 2xl:border-x-4 border-y-10 border-x-slate-800;
+}
+.navNode{
+   @apply w-[2vw] h-[2vh] border-x-3 2xl:border-x-10 border-y-3 2xl:border-b-10 border-t-5 border-y-slate-800 border-x-slate-800;
 }
 
-.popIn{
-  @apply animate-jump-in animate-once animate-duration-500 animate-ease-in;
+.titleText{
+  @apply text-[#21bd02] 2xl:text-7xl;
+}
+.contentText{
+  @apply text-[#a4ff9c];
 }
 
-.tabSelection{
-  @apply cursor-pointer text-gray-400;
+.skillLabel{
+  @apply bg-slate-700 text-center p-4 text-2xl md:text-5xl rounded-t-4xl -mb-20;
 }
-
-.skillList{
-  @apply md:text-2xl lg:text-5xl p-5 space-y-2 lg:space-y-10;
-}
-.skillTitle{
-  @apply text-center text-gray-300 underline rounded-t-2xl bg-emerald-600;
-}
-.skillItem{
-  @apply bg-gray-400 p-2 rounded-3xl;
-}
-
-.slideButton{
-  @apply border-2 bg-gray-600/45 rounded-full p-2 text-3xl;
+.skillTile{
+  @apply 2xl:text-3xl text-center bg-white/10 rounded-4xl border p-5;
 }
