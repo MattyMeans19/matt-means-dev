@@ -77,7 +77,7 @@ body {
 }
 
 .skillLabel{
-  @apply bg-slate-700 text-center p-4 text-2xl md:text-5xl rounded-t-4xl -mb-20;
+  @apply bg-slate-700 text-center p-4 text-2xl 2xl:text-5xl rounded-t-4xl -mb-20;
 }
 .skillTile{
   @apply 2xl:text-3xl text-center bg-white/10 rounded-4xl border p-5;

@@ -36,7 +36,7 @@ export const Contact = () => {
       className="p-15"
     >
         <div className="px-4 w-full p-6">
-          <h2 className="lg:text-7xl mb-8 border-10 rounded-3xl border-double bg-white text-center">
+          <h2 className="2xl:text-7xl text-4xl mb-8 border-10 rounded-3xl border-double bg-white text-center">
             Feel free to reach out for any inquiries or questions about my services!
           </h2>
           <form className="flex flex-col h-fit justify-center gap-5" onSubmit={handleSubmit}>
