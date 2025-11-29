@@ -35,6 +35,7 @@ export default function Portfolio(){
                         name={site.name}
                         url={site.url}
                         image={site.image}
+                        repo={site.repo}
                         description={site.description}
                         />
                     ))}
